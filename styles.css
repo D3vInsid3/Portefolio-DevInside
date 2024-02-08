@@ -1,0 +1,73 @@
+.special-font {
+    font-family: 'Press Start 2P', cursive;
+    color: #42EC9C;
+  }
+
+@keyframes clignotement {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .clignotant {
+    animation: clignotement 2s ease-in-out infinite;
+  }
+
+  .border-circle {
+    border: 5px solid #42EC9C;
+    border-radius: 50%;      
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* Styles pour la navbar */
+.nav-item {  
+    background-color: #333;
+    color: #fff;        
+}
+
+
+  /* Styles pour le pied de page */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+  /* Styles pour le footer */
+.contenu-footer {
+  max-width: 1000px;  
+}
+
+
+  /* Styles pour l'effet d'image pixel */
+img[alt="photo de profile"] {
+  visibility: hidden;  
+}
+
+.photoEffect {
+  background-image: url(./src/Photo_1.jpg);
+  width: 150;  
+  background-position: center;
+  background-size: cover;    
+}
+
+img[alt="photo de profile pixel"]:hover {
+  visibility: hidden;
+}
+
+

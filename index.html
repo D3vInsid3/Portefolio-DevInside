@@ -17,19 +17,7 @@
     <title>DevInside</title>
 </head>
 
-<script>
-    function sendEmail() {
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "tralloulol@gmail.com",
-            Password: "9DCE536DA70C80793AE92984FECA2626E628",
-            To: 'd.dufour@hotmail.fr',
-            From: "d.dufour@hotmail.fr",
-            Subject: "Nouvelle demande",
-            Body: "EASY"
-        }).then(message => alert(message));
-    }
-</script>
+
 
 <body class="bg-black special-font">
     <div>
@@ -53,9 +41,9 @@
         <!-- Présentation -->
         <section class="center m-5 id=" home">
             <div class="d-flex align-items-center m-5 gap-5">
-                <div class="photoEffect rounded"><img class="rounded" src="./src/Photo_1_pixel.jpg"
+                <div class="photoEffect rounded"><img class="rounded img-fluid" src="./src/Photo_1_pixel.jpg"
                         alt="photo de profile pixel" width="150"></div>
-                <div><img class="border-circle" src="./src/logo2.png" alt="Logo DevInside" width="150"></div>
+                <div><img class="border-circle img-fluid" src="./src/logo2.png" alt="Logo DevInside" width="150"></div>
             </div>
 
             <div class="m-5">
@@ -64,13 +52,15 @@
                 <h1 style="text-align: center;">DEVINDSIDE<span class="clignotant">_</span></h1>
                 <h2 style="text-align: center;">Votre vision, notre expertise.</h2>
 
-                <p class="p-5">Dans le monde de l'industrie pendant plus de 15 ans j'ai suivi le choix du
+                <p class="p-5 text-center">Dans le monde de l'industrie pendant plus de 15 ans j'ai suivi le choix du
                     <strong>coeur</strong> en me lancant dans une <strong>reconversion</strong> en tant que dev web ,
                     j'ai aujourdh'ui à coeur de vous <strong>accompagner</strong> dans
                     vos projets digitaux. Mais pas que... n'hesitez plus et contactez-moi.
                 </p>
-            </div>
 
+                <div class="center clignotant"><img class="img-fluid rotated-img" src="./src/arrowhead.png"
+                        alt="icon fleche vers le bas"></div>
+            </div>
             <div class="d-flex gap-5 mb-3">
                 <a href="https://linkedin.com/in/dufourd" target="_blank"><button type="button"
                         class="btn btn-primary"><i class="bi bi-linkedin m-2"></i>Linkedin</button></a>
@@ -84,7 +74,9 @@
 
         <!-- Mes skills -->
         <section class="center m-5" id="skills">
-            <h2 class="text-center typoStyle">Mes skills</h2>
+            <div class="center">
+                <h2 class="special-font">Mes skills</h2>
+            </div>
             <div class="d-flex gap-5 mb-3 mt-3">
                 <div>
                     <h3>Front-end</h3>
@@ -120,16 +112,18 @@
             <h2 class="text-center">Mes projets</h2>
             <div class="d-flex gap-5 mb-3 mt-3">
                 <div>
-                    <h3>Rev'Rie</h3>
-                    <a href="http://rev-rie.fr" target="_blank"><img src="./src/capture_revrie.png"
+                    <h3 class="text-center">Rev'Rie</h3>
+                    <a href="http://rev-rie.fr" target="_blank"><img class="img-fluid" src="./src/capture_revrie.png"
                             alt="illustration du site Rev-rie.fr" width="600"></a>
-                    <p>Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA, SEO...)</p>
+                    <p class="mt-3">Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA, SEO...)
+                    </p>
                 </div>
                 <div>
-                    <h3>Le golf</h3>
-                    <a href="http://golf-flaine-lescarroz.fr" target="_blank"><img src="./src/capture_golf.png"
-                            alt="illustration du site du Golf de Flaine" width="600"></a>
-                    <p>Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA, SEO...)</p>
+                    <h3 class="text-center">Le golf</h3>
+                    <a href="http://golf-flaine-lescarroz.fr" target="_blank"><img class="img-fluid"
+                            src="./src/capture_golf.png" alt="illustration du site du Golf de Flaine" width="600"></a>
+                    <p class="mt-3">Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA, SEO...)
+                    </p>
                 </div>
 
 
@@ -157,34 +151,32 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body bg-black">
-                            <form onsubmit="return sendEmail()">
+                            <form class="contact_form" action="#">
                                 <fieldset>
                                     <div class="mb-3">
                                         <label for="disabledTextInput" class="form-label">Nom & Prenom*</label>
-                                        <input type="text" id="disabledTextInput" class="form-control bg-secondary"
-                                            required>
+                                        <input type="text" class="form-control bg-secondary nomPrenom" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="disabledTextInput" class="form-label">Email*</label>
-                                        <input type="email" id="disabledTextInput" class="form-control bg-secondary"
-                                            required>
+                                        <input type="text" id="disabledTextInput"
+                                            class="form-control bg-secondary email" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="disabledTextInput" class="form-label">Telephone</label>
-                                        <input type="tel" id="disabledTextInput" class="form-control bg-secondary">
+                                        <input type="tel" class="form-control bg-secondary">
                                     </div>
                                     <div class="mb-3">
                                         <label for="disabledTextInput" class="form-label">Votre message*</label>
-                                        <textarea class="form-control bg-secondary" required></textarea>
+                                        <textarea class="form-control bg-secondary msg" type="text" required></textarea>
                                     </div>
-
                                 </fieldset>
                                 <p class="pt-3">* Required</p>
                             </form>
                         </div>
                         <div class="modal-footer bg-primary">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-secondary">Envoyer</button>
+                            <button type="submit" class="btn btn-secondary btn_modal">Envoyer</button>
                         </div>
                     </div>
                 </div>
@@ -200,6 +192,28 @@
             <p>&copy; Copyright 2024 - DEVINSIDE. Tous droits réservés.</p>
         </div>
     </footer>
+
+    <script>
+        const formbtn = document.querySelector('.btn_modal');
+        const email = document.querySelector('.email');
+        const msg = document.querySelector('.msg');
+        const nP = document.querySelector('.nomPrenom');
+        function sendEmail(e) {
+            e.preventDefault();
+            Email.send({
+                SecureToken: "d9034171-f19e-4314-b6da-7b303c8fab00",
+                To: 'd_dufour@hotmail.fr',
+                From: 'tralloulol@gmail.com',
+                Subject: "Nouvelle demande Portefolio",
+                Body: ("Email : " + email.value + " | " + "Nom & Prenom:" + nP.value + " | " + "Message: " + msg.value)
+            }).then(
+                message => alert(message)
+            );
+        }
+
+        formbtn.addEventListener('click', sendEmail);
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

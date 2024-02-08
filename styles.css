@@ -3,6 +3,11 @@
     color: #42EC9C;
   }
 
+.special-font_2 {
+  font-family: 'Press Start 2P', cursive;
+  color: #ffffff;
+  }  
+
 @keyframes clignotement {
     0% {
       opacity: 1;
@@ -29,6 +34,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .rotated-img {
+    transform: rotate(90deg);
   }
 
 

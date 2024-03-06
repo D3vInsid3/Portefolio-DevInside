@@ -8,7 +8,12 @@
 .special-font {
     font-family: 'Press Start 2P', cursive;
     color: var(--color2);
-  } 
+}
+
+.react-font {
+  font-family: "Anta", sans-serif;
+  color: var(--color2);
+}
 
 .secondary-color {
     color: var(--color3);
@@ -99,15 +104,5 @@ img[alt="photo de profile pixel"]:active {
   background-repeat: no-repeat;
   background-position: center;
 }
-
- /* Styles pour zooom img 
- .img-zoom {
-  transition: transform .5s ease-in-out;
- }
-
-.img-zoom:hover {
-  transform: scale(1.5);
-} */
-
 
 

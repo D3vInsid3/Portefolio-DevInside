@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,11 +24,15 @@
 
 
 <body class="specific-bg special-font">
-    <div>
-        <nav class="center nav-item fixed-top">
+    <div class="container">
+        <!-- NAV barre -->
+        <nav class="center nav-item fixed-top ">
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#top">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reconversion">Reconversion</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#skills">Skils</a>
@@ -35,161 +43,245 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
+                <li class="nav-item mt-2">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">2024</label>
+                    </div>
+                </li>
             </ul>
         </nav>
-        
-        <!-- Présentation -->
-        <section class="center m-5 id="top">
-            <div class="d-flex align-items-center m-5 gap-5">
-                <div class="photoEffect rounded border-simple img-container">
-                    <img class="rounded img-fluid" src="./src/Photo_1_pixel.jpg" alt="photo de profile pixel"
-                        width="150">
-                    <div class="svg-overlay clignotant"></div>
-                </div>
-                <div><img class="border-circle img-fluid" src="./src/logo2.png" alt="Logo DevInside" width="150"></div>
+        <!-- Section Classique -->
+        <div id="old">
+            <!-- Présentation -->
+            <section class="center m-5 id=" top">
+                <div class="d-flex align-items-center m-5 gap-5">
+                    <div class="photoEffect rounded border-simple img-container">
+                        <img class="rounded img-fluid" src="./src/Photo_1_pixel.jpg" alt="photo de profile pixel"
+                            width="150">
+                        <div class="svg-overlay clignotant"></div>
+                    </div>
+                    <div><img class="border-circle img-fluid" src="./src/logo2.png" alt="Logo DevInside" width="150">
+                    </div>
 
-            </div>
-
-            <div class="m-5">
-                <h1 style="text-align: center;">DUFOUR David</h1>
-                <h1 style="text-align: center;">alias</h1>
-                <h1 style="text-align: center;">DEVINDSIDE<span class="clignotant">_</span></h1>
-                <h2 style="text-align: center;">Votre vision, notre expertise.</h2>
-
-                <p class="p-5 text-center">Dans le monde de l'industrie pendant plus de 15 ans j'ai suivi le choix du
-                    <strong>coeur</strong> en me lancant dans une <strong>reconversion</strong> en tant que dev web ,
-                    j'ai aujourdh'ui à coeur de vous <strong>accompagner</strong> dans
-                    vos projets digitaux. Mais pas que... n'hesitez plus et contactez-moi.
-                </p>
-
-                <div class="center clignotant"><img class="img-fluid rotated-img" src="./src/arrowhead.png"
-                        alt="icon fleche vers le bas"></div>
-            </div>
-            <div class="d-flex gap-5 mb-3">
-                <a href="https://linkedin.com/in/dufourd" target="_blank"><button type="button"
-                        class="btn btn-primary"><i class="bi bi-linkedin m-2"></i>Linkedin</button></a>
-                <a href="https://github.com/D3vInsid3" target="_blank"><button type="button" class="btn btn-primary"><i
-                            class="bi bi-github m-2"></i>Github</button> </a>
-                <a href="mailto:d.dufour@hotmail.fr?subject=Objet%20du%20message&body=Corps%20du%20message"
-                    target="_blank"><button type="button" class="btn btn-primary"><i
-                            class="bi bi-envelope m-2"></i>d.dufour@hotmail.fr</button> </a>
-            </div>
-        </section>
-
-        <!-- Mes skills -->
-        <section class="center container border border-white p-0 mb-3" id="skills">
-            <div class="container center specific-font m-0 p-0">
-                <h2 class="special-font secondary-color m-1">Mes skills</h2>
-            </div>
-            <div class="d-flex gap-5 mb-5 mt-5">
-                <div>
-                    <h3>Front-end</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Back-end</h3>
-                    <ul>
-                        <li>Firebase</li>
-                        <li>MangoDB</li>
-                    </ul>
                 </div>
 
-                <div>
-                    <h3>Autre</h3>
-                    <ul>
-                        <li>Hostinger</li>
-                        <li>Github</li>
-                        <li>Wordpress</li>
-                    </ul>
-                </div>
+                <div class="m-5">
+                    <h1 style="text-align: center;">DUFOUR David</h1>
+                    <h1 style="text-align: center;">alias</h1>
+                    <h1 style="text-align: center;">DEVINDSIDE<span class="clignotant">_</span></h1>
+                    <h2 style="text-align: center;">Votre vision, mon expertise.</h2>
 
-            </div>
-        </section>
-
-        <!-- Mes projets -->
-        <section class="center container border border-white p-0 mb-3" id="projets">
-            <div class="container center specific-font m-0 p-0">
-                <h2 class="special-font secondary-color m-1">Mes projets</h2>
-            </div>
-            <div class="container d-flex gap-5 mb-5 mt-5">
-                <div>
-                    <h3 class="text-center">Rev'Rie</h3>
-                    <a href="http://rev-rie.fr" target="_blank"><img class="img-fluid rounded img-zoom"
-                            src="./src/capture_revrie.png" alt="illustration du site Rev-rie.fr" width="600"></a>
-                    <p class="mt-3">Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA, SEO...)
+                    <p class="p-5 text-center">Dans le monde de l'industrie pendant plus de 15 ans j'ai suivi le choix
+                        du
+                        <strong>coeur</strong> en me lançant dans une <strong>reconversion</strong> en tant que
+                        développeur web.
+                        Aujourdh'ui mon engagement est de vous <strong>accompagner</strong> dans vos projets digitaux.
+                        Mais pas seulement... n'hesitez plus et contactez-moi.
                     </p>
+
+                    <div class="center clignotant"><img class="img-fluid rotated-img" src="./src/arrowhead.png"
+                            alt="icon fleche vers le bas"></div>
                 </div>
-                <div>
-                    <h3 class="text-center">Le golf</h3>
-                    <a href="http://golf-flaine-lescarroz.fr" target="_blank"><img class="img-fluid rounded img-zoom"
-                            src="./src/capture_golf.png" alt="illustration du site du Golf de Flaine" width="600"></a>
-                    <p class="mt-3">Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA, SEO...)
-                    </p>
+                <div class="d-flex gap-5 mb-3">
+                    <a href="https://linkedin.com/in/dufourd" target="_blank"><button type="button"
+                            class="btn btn-primary"><i class="bi bi-linkedin m-2"></i>Linkedin</button></a>
+                    <a href="https://github.com/D3vInsid3" target="_blank"><button type="button"
+                            class="btn btn-primary"><i class="bi bi-github m-2"></i>Github</button> </a>
+                    <a href="mailto:d.dufour@hotmail.fr?subject=Objet%20du%20message&body=Corps%20du%20message"
+                        target="_blank"><button type="button" class="btn btn-primary"><i
+                                class="bi bi-envelope m-2"></i>d.dufour@hotmail.fr</button> </a>
+                </div>
+            </section>
+
+            <!-- Ma reconversion -->
+            <section class="center container border border-white p-0 mb-3" id="reconversion">
+                <div class="container center specific-font m-0 p-0">
+                    <h2 class="special-font secondary-color m-1">Ma reconversion</h2>
+                </div>
+                <a href="https://oclock.io/" target="_blank"><img src="./src/logo_oclock.png" alt="logo O'clock"
+                        class="img-fluid m-5" width="150"></a>
+                <div class="container m-3">
+                    <h2 class="text-center">Formation de concepteur développeur d'application</h2>
+                    <p class="text-center m-0">10 mois dont 2 en stage</p>
+                    <p class="text-center m-0">RNCP niveau 6 obtenu en Décembre 2024</p>
+                </div>
+                <div class="mb-3">----</div>
+                <div class="container">
+                    <h3 class="text-center">En quelques mots</h3>
+                    <div class="d-flex gap-5 m-5 justify-content-md-center">
+                        <div>
+                            <ul>
+                                <li>Algorithmie</li>
+                                <li>Base de donnée</li>
+                                <li>DevOps</li>
+                                <li>Sécurité</li>
+                                <li>Back/Front end</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>React/Nestjs</li>
+                                <li>Gestion de projet</li>
+                                <li>Conception UML</li>
+                                <li>Architecture</li>
+                                <li>IA</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex center gap-5 m-5">
+                        <a href="https://oclock.io/formations/concepteur-developpeur-initial" target="_blank"><button
+                                type="button" class="btn btn-primary">En savoir plus</button></a>
+                    </div>
+                    <div class="d-flex flex-row-reverse">
+                        <p>Merci à eux :)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mes skills -->
+            <section class="center container border border-white p-0 mb-3" id="skills">
+                <div class="container center specific-font m-0 p-0">
+                    <h2 class="special-font secondary-color m-1">Mes skills</h2>
+                </div>
+                <div class="container d-flex justify-content-center gap-5 mb-5 mt-5">
+                    <div>
+                        <h3 class="text-center">Front-end</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-center">Back-end</h3>
+                        <ul>
+                            <li>Firebase</li>
+                            <li>MangoDB</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-center">Autres</h3>
+                        <ul>
+                            <li>Hostinger</li>
+                            <li>Github</li>
+                            <li>Wordpress</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mes projets -->
+            <section class="center container border border-white p-0 mb-3" id="projets">
+                <div class="container center specific-font m-0 p-0">
+                    <h2 class="special-font secondary-color m-1">Mes projets</h2>
+                </div>
+                <div class="container d-flex gap-5 mb-5 mt-5">
+                    <div>
+                        <h3 class="text-center">Rev'Rie</h3>
+                        <p class="text-center fs-6">Institut de prothésie ongulaire</p>
+                        <a href="http://rev-rie.fr" target="_blank"><img class="img-fluid rounded img-zoom"
+                                src="./src/capture_revrie.png" alt="illustration du site Rev-rie.fr" width="600"></a>
+                        <p class="mt-3">Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
+                            SEO...)
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-center">Golf Flaine LCZ</h3>
+                        <p class="text-center fs-6">Le golf au coeur de la Haute-Savoie</p>
+                        <a href="http://golf-flaine-lescarroz.fr" target="_blank"><img
+                                class="img-fluid rounded img-zoom" src="./src/capture_golf.png"
+                                alt="illustration du site du Golf de Flaine" width="600"></a>
+                        <p class="mt-3">Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
+                            SEO...)
+                        </p>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section class="center container border border-white p-0 mb-3" id="contact">
+                <div class="container center specific-font m-0 p-0">
+                    <h2 class="special-font secondary-color m-1">Contact</h2>
                 </div>
 
+                <!-- Button trigger modal -->
+                <div class="center m-5">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Me laisser un message
+                    </button>
+                </div>
 
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section class="center container border border-white p-0 mb-3" id="contact">
-            <div class="container center specific-font m-0 p-0">
-                <h2 class="special-font secondary-color m-1">Contact</h2>
-            </div>
-
-            <!-- Button trigger modal -->
-            <div class="center m-5">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Me laisser un message
-                </button>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content border border-white">
-                        <div class="modal-header bg-primary">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Faisons connaissance</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body bg-black">
-                            <form class="contact_form" action="#">
-                                <fieldset>
-                                    <div class="mb-3">
-                                        <label for="disabledTextInput" class="form-label">Nom & Prenom*</label>
-                                        <input type="text" class="form-control bg-secondary nomPrenom" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="disabledTextInput" class="form-label">Email*</label>
-                                        <input type="text" id="disabledTextInput"
-                                            class="form-control bg-secondary email" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="disabledTextInput" class="form-label">Telephone</label>
-                                        <input type="tel" class="form-control bg-secondary">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="disabledTextInput" class="form-label">Votre message*</label>
-                                        <textarea class="form-control bg-secondary msg" type="text" required></textarea>
-                                    </div>
-                                </fieldset>
-                                <p class="pt-3">* Required</p>
-                            </form>
-                        </div>
-                        <div class="modal-footer bg-primary">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-secondary btn_modal">Envoyer</button>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content border border-white">
+                            <div class="modal-header bg-primary">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Faisons connaissance</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body bg-black">
+                                <form class="contact_form" action="#">
+                                    <fieldset>
+                                        <div class="mb-3">
+                                            <label for="disabledTextInput" class="form-label">Nom & Prenom*</label>
+                                            <input type="text" class="form-control bg-secondary nomPrenom" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="disabledTextInput" class="form-label">Email*</label>
+                                            <input type="text" id="disabledTextInput"
+                                                class="form-control bg-secondary email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="disabledTextInput" class="form-label">Telephone</label>
+                                            <input type="tel" class="form-control bg-secondary">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="disabledTextInput" class="form-label">Votre message*</label>
+                                            <textarea class="form-control bg-secondary msg" type="text"
+                                                required></textarea>
+                                        </div>
+                                    </fieldset>
+                                    <p class="pt-3">* Required</p>
+                                </form>
+                            </div>
+                            <div class="modal-footer bg-primary">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-secondary btn_modal">Envoyer</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <p>Ou contactez moi directement sur mes reseaux sociaux.</p>
+                <div class="d-flex gap-5 m-5">
+                    <a href="https://linkedin.com/in/dufourd" target="_blank"><button type="button"
+                            class="btn btn-primary"><i class="bi bi-linkedin m-2"></i>Linkedin</button></a>
+                    <a href="https://github.com/D3vInsid3" target="_blank"><button type="button"
+                            class="btn btn-primary"><i class="bi bi-github m-2"></i>Github</button> </a>
+                    <a href="mailto:d.dufour@hotmail.fr?subject=Objet%20du%20message&body=Corps%20du%20message"
+                        target="_blank"><button type="button" class="btn btn-primary"><i
+                                class="bi bi-envelope m-2"></i>d.dufour@hotmail.fr</button> </a>
+                </div>
+            </section>
+        </div>
+        <!-- Section React -->
+        <div id="new">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border text-primary mt-5" role="status" id="loading">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <h1 class="p-5 center">In progress</h1>
             </div>
-        </section>
+            <div id="root"></div>
+        </div>
 
     </div>
 
@@ -202,6 +294,7 @@
     </footer>
 
     <script>
+        //Send mail
         const formbtn = document.querySelector('.btn_modal');
         const email = document.querySelector('.email');
         const msg = document.querySelector('.msg');
@@ -218,15 +311,49 @@
                 message => alert(message)
             );
         }
-
         formbtn.addEventListener('click', sendEmail);
+
+        //Hide old section
+        const btnReact = document.querySelector('#flexSwitchCheckDefault');
+        const oldSection = document.querySelector('#old');
+        const newSection = document.querySelector('#new');
+        const mainBody = document.querySelector('body');
+
+        newSection.hidden = true;
+
+        function hideOldSection(e) {
+            if (btnReact.checked == true) {
+                oldSection.hidden = true;
+                newSection.hidden = false;
+                //React version
+                mainBody.classList.remove('specific-bg');
+                mainBody.classList.remove('special-font');
+            } else {
+                oldSection.hidden = false;
+                newSection.hidden = true;
+                //React version
+                mainBody.classList.add('specific-bg');
+                mainBody.classList.add('special-font');
+            }
+        }
+
+        btnReact.addEventListener('click', hideOldSection);
 
     </script>
 
+    <!-- Chargement des bibliotheques Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- Chargement des bibliotheques React -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <!-- Référence à votre fichier React -->
+    <script src="app.js" type="text/babel"></script>
 </body>
 
 </html>

@@ -46,7 +46,7 @@
                 <li class="nav-item mt-2">
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">2024</label>
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Structure React</label>
                     </div>
                 </li>
             </ul>
@@ -83,7 +83,7 @@
                     <div class="center clignotant"><img class="img-fluid rotated-img" src="./src/arrowhead.png"
                             alt="icon fleche vers le bas"></div>
                 </div>
-                <div class="container d-flex gap-5 mb-3">
+                <div class="container d-flex justify-content-center gap-5 mb-3">
                     <a href="https://linkedin.com/in/dufourd" target="_blank"><button type="button"
                             class="btn btn-primary"><i class="bi bi-linkedin m-2"></i>Linkedin</button></a>
                     <a href="https://github.com/D3vInsid3" target="_blank"><button type="button"
@@ -259,7 +259,7 @@
                     </div>
                 </div>
                 <p>Ou contactez moi directement sur mes reseaux sociaux.</p>
-                <div class=" container d-flex gap-5 m-5">
+                <div class=" container justify-content-center d-flex gap-5 m-5">
                     <a href="https://linkedin.com/in/dufourd" target="_blank"><button type="button"
                             class="btn btn-primary"><i class="bi bi-linkedin m-2"></i>Linkedin</button></a>
                     <a href="https://github.com/D3vInsid3" target="_blank"><button type="button"
@@ -271,15 +271,7 @@
             </section>
         </div>
         <!-- Section React -->
-        <div id="new">
-            <div class="container">
-                <div class="d-flex justify-content-center">
-                    <div class="spinner-border text-primary mt-5" role="status" id="loading">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                </div>
-                <h1 class="p-5 center">In progress</h1>
-            </div>
+        <div id="new">            
             <div id="root"></div>
         </div>
 
@@ -328,6 +320,7 @@
                 //React version
                 mainBody.classList.remove('specific-bg');
                 mainBody.classList.remove('special-font');
+                mainBody.classList.add('bg-react');
             } else {
                 oldSection.hidden = false;
                 newSection.hidden = true;
@@ -350,9 +343,7 @@
     <!-- Chargement des bibliotheques React -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
-
-    <!-- Référence à votre fichier React -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>    
     <script src="app.js" type="text/babel"></script>
 </body>
 

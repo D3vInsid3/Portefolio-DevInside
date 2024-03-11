@@ -173,8 +173,7 @@ class Btn_contact extends React.Component {
 }
 
 class Modal_contact extends React.Component {    
-    render() {
-        const formReact = document.querySelector('#staticBackdropReact');        
+    render() {       
         const formbtnReact = document.querySelector('.btn_modal_react');
         const email = document.querySelector('.email');
         const msg = document.querySelector('.msg');

@@ -109,11 +109,12 @@ img[alt="photo de profile pixel"]:active {
   background-color: #020621;
 }
 
-.bg-test {
+.bg-card {
   background-color: #121746 ;
 }
 
 .border-circle-2 {
   border: 5px solid #121746 ;        
 }
+
 

@@ -10,26 +10,18 @@ class Presentation extends React.Component {
                         <img className="img-fluid rounded-circle border-circle-2" src="./src/logo2.png" alt="Logo DevInside" width="150" />
                     </div>
                     <div className="center">
-                        <h1 className="fw-bold">DUFOUR David</h1>
+                        <h1 className="fw-bold" style={{ fontSize: "4rem" }}>DUFOUR David</h1>
                         <h2>alias</h2>
                         <h2>DEVINDSIDE</h2>
                         <h2>Votre vision, mon expertise.</h2>
                     </div>
                 </div>
-                <p className="p-3 mb-0 text-center">Dans le monde de l'industrie pendant plus de 15 ans j'ai suivi le choix
+                <p className="p-3 mb-0 text-center fs-3">Dans le monde de l'industrie pendant plus de 15 ans j'ai suivi le choix
                     du <strong>coeur</strong> en me lançant dans une <strong>reconversion</strong> en tant que
                     développeur web. Aujourdh'ui mon engagement est de vous <strong>accompagner</strong> dans vos projets digitaux.
-                    Mais pas seulement... n'hesitez plus et contactez-moi.
+                    <br></br>Mais pas seulement... n'hesitez plus et contactez-moi.
                 </p>
-                <div className="d-flex justify-content-center gap-5 m-5">
-                    <a href="https://linkedin.com/in/dufourd" target="_blank"><button type="button"
-                        className="btn btn-primary"><i className="bi bi-linkedin m-2"></i>Linkedin</button></a>
-                    <a href="https://github.com/D3vInsid3" target="_blank"><button type="button"
-                        className="btn btn-primary"><i className="bi bi-github m-2"></i>Github</button> </a>
-                    <a href="mailto:d.dufour@hotmail.fr?subject=Objet%20du%20message&body=Corps%20du%20message"
-                        target="_blank"><button type="button" className="btn btn-primary"><i
-                            className="bi bi-envelope m-2"></i>d.dufour@hotmail.fr</button> </a>
-                </div>
+                <Btn_contact />
             </div>
         );
     }
@@ -39,12 +31,12 @@ class Reconversion extends React.Component {
     render() {
         return (
             <div className="bg-react text-white">
-                <div className="container center specific-font m-0 p-0">
-                    <h2 className="secondary-color m-1">Ma reconversion</h2>
+                <div className="bg-react container center specific-font m-0 p-0">
+                    <h2 className="secondary-color m-1" style={{ fontSize: "4rem" }}>Ma reconversion</h2>
                 </div>
                 <a href="https://oclock.io/" target="_blank"><img src="./src/logo_oclock.png" alt="logo O'clock"
                     className="img-fluid mx-auto d-block m-5" width="150" /></a>
-                <div class="container m-3">
+                <div className="container m-3">
                     <h2 className="text-center">Formation de concepteur développeur d'application</h2>
                     <p className="text-center m-0">10 mois dont 2 en stage</p>
                     <p className="text-center m-0">RNCP niveau 6 obtenu en Décembre 2024</p>
@@ -74,7 +66,7 @@ class Reconversion extends React.Component {
                     </div>
                     <div className="d-flex center gap-5 m-5">
                         <a href="https://oclock.io/formations/concepteur-developpeur-initial" target="_blank"><button
-                            type="button" class="btn btn-primary">En savoir plus</button></a>
+                            type="button" className="btn btn-primary">En savoir plus</button></a>
                     </div>
                     <div className="d-flex flex-row-reverse">
                         <p>Merci à eux :)</p>
@@ -89,8 +81,8 @@ class Skills extends React.Component {
     render() {
         return (
             <div className="bg-react text-white">
-                <div className="container center specific-font m-0 p-0">
-                    <h2 className="secondary-color m-1">Mes skills</h2>
+                <div className="container bg-react center specific-font m-0 p-0">
+                    <h2 className="secondary-color m-1" style={{ fontSize: "4rem" }}>Mes skills</h2>
                 </div>
                 <div className="container d-flex justify-content-center gap-5 mt-5">
                     <div>
@@ -123,50 +115,134 @@ class Skills extends React.Component {
     }
 }
 
+class Projet_card extends React.Component {
+    render() {
+        const { title, subtitle, img, alt_img, link, text } = this.props
+        return (
+            <div className="card text-light border border-5" style={{ width: "18rem", backgroundColor: "#121746" }}>
+                <div className="card-body p-1">
+                    <h3 className="text-center">{title}</h3>
+                    <p className="text-center fs-6">{subtitle}</p>
+                </div>
+                <div className="container">
+                    <a href={link} target="_blank"><img className="img-fluid rounded img-zoom m-1"
+                        src={img} alt={alt_img} width="600" /></a>
+                </div>
+                <div className="card-body">
+                    <p className="card-text text-center fs-6">{text}</p>
+                </div>
+            </div>
+        )
+    }
+}
+
 class Projets extends React.Component {
     render() {
         return (
             <div className="bg-react text-white">
-                <div className="container center specific-font m-0 p-0">
-                    <h2 className="secondary-color m-1">Mes projets</h2>
-                </div>
-                <div className="card text-light border border-5" style={{ width: "18rem" }}>
-                    <div className="card-body bg-test">
-                        <h3 className="text-center">Rev'Rie</h3>
-                        <p className="text-center fs-6">Institut de prothésie ongulaire</p>
-                    </div>
-                    <div className="container bg-test">
-                        <a href="http://rev-rie.fr" target="_blank"><img className="img-fluid rounded img-zoom m-1"
-                            src="./src/capture_revrie.png" alt="illustration du site Rev-rie.fr" width="600" /></a>
-                    </div>
-                    <div className="card-body bg-test">
-                        <p className="card-text text-center">Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
-                            SEO...)</p>
-                    </div>
+                <div className="container bg-react center specific-font m-0 p-0">
+                    <h2 className="secondary-color m-1" style={{ fontSize: "4rem" }}>Mes Projets</h2>
                 </div>
                 <div className="container d-flex gap-5 mt-5">
-                    <div className="border border-light-subtle rounded">
-                        <h3 className="text-center">Rev'Rie</h3>
-                        <p className="text-center fs-6">Institut de prothésie ongulaire</p>
-                        <a href="http://rev-rie.fr" target="_blank"><img className="img-fluid rounded img-zoom"
-                            src="./src/capture_revrie.png" alt="illustration du site Rev-rie.fr" width="600" /></a>
-                        <p className="mt-3">Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
-                            SEO...)
-                        </p>
-                    </div>
-                    <div>
-                        <h3 className="text-center">Golf Flaine LCZ</h3>
-                        <p className="text-center fs-6">Le golf au coeur de la Haute-Savoie</p>
-                        <a href="http://golf-flaine-lescarroz.fr" target="_blank"><img
-                            className="img-fluid rounded img-zoom" src="./src/capture_golf.png"
-                            alt="illustration du site du Golf de Flaine" width="600" /></a>
-                        <p className="mt-3">Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
-                            SEO...)
-                        </p>
-                    </div>
+                    <Projet_card title="Rev'Rie" subtitle="Institut de prothésie ongulaire" text="Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
+                        SEO...)" link="http://rev-rie.fr" img="./src/capture_revrie.png" alt_img="illustration du site Rev-rie.fr" />
+                    <Projet_card title="Golf Flaine LCZ" subtitle="Le golf au coeur du 74" text="Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
+                        SEO...)" link="http://golf-flaine-lescarroz.fr" img="./src/capture_golf.png" alt_img="illustration du site du Golf de Flaine" />
+                    <Projet_card title="DevInside" subtitle="Personnal Portfolio" text="Portefolio de mes projets avec double affichage, classique HTML/CSS/JS & Moderne en React"
+                        link="https://d3vinsid3.github.io/Portefolio-DevInside/" img="./src/capture_devinside.png" alt_img="illustration du site DevInside" />
                 </div>
             </div>
         );
+    }
+}
+
+class Btn_contact extends React.Component {
+    render() {
+        return (
+            <div className="d-flex justify-content-center gap-5 m-5">
+                <a href="https://linkedin.com/in/dufourd" target="_blank"><button type="button"
+                    className="btn btn-primary"><i className="bi bi-linkedin m-2"></i>Linkedin</button></a>
+                <a href="https://github.com/D3vInsid3" target="_blank"><button type="button"
+                    className="btn btn-primary"><i className="bi bi-github m-2"></i>Github</button> </a>
+                <a href="mailto:d.dufour@hotmail.fr?subject=Objet%20du%20message&body=Corps%20du%20message"
+                    target="_blank"><button type="button" className="btn btn-primary"><i
+                        className="bi bi-envelope m-2"></i>d.dufour@hotmail.fr</button> </a>
+            </div>
+        );
+    }
+}
+
+class Modal_contact extends React.Component {    
+    render() {
+        const formReact = document.querySelector('#staticBackdropReact');        
+        const formbtnReact = document.querySelector('.btn_modal_react');
+        const email = document.querySelector('.email');
+        const msg = document.querySelector('.msg');
+        const nP = document.querySelector('.nomPrenom');
+        const closeReact = document.querySelector('.toto')
+        function sendEmail(e) {
+            e.preventDefault();
+            Email.send({
+                SecureToken: "d9034171-f19e-4314-b6da-7b303c8fab00",
+                To: 'd_dufour@hotmail.fr',
+                From: 'tralloulol@gmail.com',
+                Subject: "Nouvelle demande Portefolio",
+                Body: ("Email : " + email.value + " | " + "Nom & Prenom:" + nP.value + " | " + "Message: " + msg.value)
+            }).then(                         
+                message => alert("Message envoyé"),
+                error => console.error(error),                
+            ).then(
+                document.querySelector('.toto').click(),
+            );
+        }        
+
+        if (formbtnReact !== null) {
+            formbtnReact.addEventListener('click', sendEmail)
+        }
+
+        return (
+            <div className="modal fade" id="staticBackdropReact" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabIndex="-1" aria-labelledby="staticBackdropReactLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content border border-white">
+                        <div className="modal-header bg-primary">
+                            <h1 className="modal-title fs-5" id="staticBackdropReactLabel">Faisons connaissance</h1>
+                            <button type="button" className="btn-close toto" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body bg-black">
+                            <form className="contact_form" action="#">
+                                <fieldset>
+                                    <div className="mb-3">
+                                        <label htmlFor="disabledTextInput" className="form-label">Nom & Prenom*</label>
+                                        <input type="text" className="form-control bg-secondary nomPrenom" required />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="disabledTextInput" className="form-label">Email*</label>
+                                        <input type="text" id="disabledTextInput"
+                                            className="form-control bg-secondary email" required />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="disabledTextInput" className="form-label">Telephone</label>
+                                        <input type="tel" className="form-control bg-secondary" />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="disabledTextInput" className="form-label">Votre message*</label>
+                                        <textarea className="form-control bg-secondary msg" type="text"
+                                            required></textarea>
+                                    </div>
+                                </fieldset>
+                                <p className="pt-3">* Required</p>
+                            </form>
+                        </div>
+                        <div className="modal-footer bg-primary">
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" className="btn btn-secondary btn_modal_react" onClick={sendEmail}>Envoyer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
     }
 }
 
@@ -174,25 +250,18 @@ class Contact extends React.Component {
     render() {
         return (
             <div className="bg-react text-white">
-                <div className="container center specific-font m-0 p-0">
-                    <h2 className="secondary-color m-1">Contact</h2>
+                <div className="container bg-react center specific-font m-0 p-0">
+                    <h2 className="secondary-color m-1" style={{ fontSize: "4rem" }}>Contact</h2>
                 </div>
                 <div className="center m-5">
                     <button type="button" className="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
+                        data-bs-target="#staticBackdropReact">
                         Me laisser un message
                     </button>
                 </div>
                 <p className="center">Ou contactez moi directement sur mes reseaux sociaux.</p>
-                <div className="d-flex justify-content-center gap-5 m-5">
-                    <a href="https://linkedin.com/in/dufourd" target="_blank"><button type="button"
-                        className="btn btn-primary"><i className="bi bi-linkedin m-2"></i>Linkedin</button></a>
-                    <a href="https://github.com/D3vInsid3" target="_blank"><button type="button"
-                        className="btn btn-primary"><i className="bi bi-github m-2"></i>Github</button> </a>
-                    <a href="mailto:d.dufour@hotmail.fr?subject=Objet%20du%20message&body=Corps%20du%20message"
-                        target="_blank"><button type="button" className="btn btn-primary"><i
-                            className="bi bi-envelope m-2"></i>d.dufour@hotmail.fr</button> </a>
-                </div>
+                <Btn_contact />
+                <Modal_contact />
             </div>
         );
     }

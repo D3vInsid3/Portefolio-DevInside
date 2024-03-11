@@ -285,9 +285,11 @@
         </div>
     </footer>
 
-    <script>
+    <script defer>
         //Send mail
+        const form = document.querySelector('#staticBackdrop');
         const formbtn = document.querySelector('.btn_modal');
+        const formbtn2 = document.querySelector('.btn_modal2');
         const email = document.querySelector('.email');
         const msg = document.querySelector('.msg');
         const nP = document.querySelector('.nomPrenom');
@@ -299,11 +301,16 @@
                 From: 'tralloulol@gmail.com',
                 Subject: "Nouvelle demande Portefolio",
                 Body: ("Email : " + email.value + " | " + "Nom & Prenom:" + nP.value + " | " + "Message: " + msg.value)
-            }).then(
-                message => alert(message)
+            }).then(                
+                message => alert("Message envoyé"),
+                form.hidden = true,
             );
         }
         formbtn.addEventListener('click', sendEmail);
+
+        if (formbtn2 !== null) {
+            formbtn2.addEventListener('click', sendEmail)
+        }
 
         //Hide old section
         const btnReact = document.querySelector('#flexSwitchCheckDefault');

@@ -179,7 +179,7 @@ class Modal_contact extends React.Component {
         const email = document.querySelector('.email');
         const msg = document.querySelector('.msg');
         const nP = document.querySelector('.nomPrenom');
-        const closeReact = document.querySelector('.toto')
+        const closeReact = document.querySelector('.closeReact')
         function sendEmail(e) {
             e.preventDefault();
             Email.send({
@@ -192,7 +192,7 @@ class Modal_contact extends React.Component {
                 message => alert("Message envoyé"),
                 error => console.error(error),                
             ).then(
-                document.querySelector('.toto').click(),
+                document.querySelector('.closeReact').click(),
             );
         }        
 
@@ -207,7 +207,7 @@ class Modal_contact extends React.Component {
                     <div className="modal-content border border-white">
                         <div className="modal-header bg-primary">
                             <h1 className="modal-title fs-5" id="staticBackdropReactLabel">Faisons connaissance</h1>
-                            <button type="button" className="btn-close toto" data-bs-dismiss="modal"
+                            <button type="button" className="btn-close closeReact" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
                         <div className="modal-body bg-black">

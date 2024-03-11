@@ -223,7 +223,7 @@
                         <div class="modal-content border border-white">
                             <div class="modal-header bg-primary">
                                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Faisons connaissance</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                <button type="button" class="btn-close closeOld" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body bg-black">
@@ -288,8 +288,7 @@
     <script defer>
         //Send mail
         const form = document.querySelector('#staticBackdrop');
-        const formbtn = document.querySelector('.btn_modal');
-        const formbtn2 = document.querySelector('.btn_modal2');
+        const formbtn = document.querySelector('.btn_modal');        
         const email = document.querySelector('.email');
         const msg = document.querySelector('.msg');
         const nP = document.querySelector('.nomPrenom');
@@ -302,16 +301,12 @@
                 Subject: "Nouvelle demande Portefolio",
                 Body: ("Email : " + email.value + " | " + "Nom & Prenom:" + nP.value + " | " + "Message: " + msg.value)
             }).then(                
-                message => alert("Message envoyé"),
-                form.hidden = true,
+                message => alert("Message envoyé"),                
+                document.querySelector('.closeOld').click(),
             );
         }
         formbtn.addEventListener('click', sendEmail);
-
-        if (formbtn2 !== null) {
-            formbtn2.addEventListener('click', sendEmail)
-        }
-
+       
         //Hide old section
         const btnReact = document.querySelector('#flexSwitchCheckDefault');
         const oldSection = document.querySelector('#old');

@@ -251,7 +251,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="disabledTextInput" class="form-label">Telephone</label>
-                                            <input type="tel" class="form-control bg-secondary">
+                                            <input type="tel" class="form-control bg-secondary tel">
                                         </div>
                                         <div class="mb-3">
                                             <label for="disabledTextInput" class="form-label">Votre message*</label>
@@ -302,6 +302,7 @@
         const email = document.querySelector('.email');
         const msg = document.querySelector('.msg');
         const nP = document.querySelector('.nomPrenom');
+        const tel = document.querySelector('.tel');
         function sendEmail(e) {
             e.preventDefault();
             Email.send({
@@ -309,7 +310,7 @@
                 To: 'd_dufour@hotmail.fr',
                 From: 'tralloulol@gmail.com',
                 Subject: "Nouvelle demande Portefolio",
-                Body: ("Email : " + email.value + " | " + "Nom & Prenom:" + nP.value + " | " + "Message: " + msg.value)
+                Body: ("Email : " + email.value + " | " + "Nom & Prenom : " + nP.value + " | " + "Message : " + msg.value + " | " + "Tel : " + tel.value)
             }).then(
                 message => alert("Message envoyé"),
                 document.querySelector('.closeOld').click(),

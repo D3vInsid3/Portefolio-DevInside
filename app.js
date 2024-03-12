@@ -172,28 +172,31 @@ class Btn_contact extends React.Component {
     }
 }
 
-class Modal_contact extends React.Component {    
-    render() {       
+class Modal_contact extends React.Component {
+    render() {
         const formbtnReact = document.querySelector('.btn_modal_react');
-        const email = document.querySelector('.email');
-        const msg = document.querySelector('.msg');
-        const nP = document.querySelector('.nomPrenom');
-        const closeReact = document.querySelector('.closeReact')
+
         function sendEmail(e) {
             e.preventDefault();
+
+            const emailReact = document.querySelector('.emailReact');
+            const msgReact = document.querySelector('.msgReact');
+            const npReact = document.querySelector('.nomPrenomReact');
+            const telReact = document.querySelector('.telReact');
+
             Email.send({
                 SecureToken: "d9034171-f19e-4314-b6da-7b303c8fab00",
                 To: 'd_dufour@hotmail.fr',
                 From: 'tralloulol@gmail.com',
                 Subject: "Nouvelle demande Portefolio",
-                Body: ("Email : " + email.value + " | " + "Nom & Prenom:" + nP.value + " | " + "Message: " + msg.value)
-            }).then(                         
-                message => alert("Message envoyé"),
-                error => console.error(error),                
+                Body: ("Email : " + emailReact.value + " | " + "Nom & Prenom : " + npReact.value + " | " + "Message : " + msgReact.value + " | " + "Tel : " + telReact.value)
+            }).then(
+                document.querySelector('.btnCloseReact').click(),
             ).then(
-                document.querySelector('.closeReact').click(),
+                message => alert("Message envoyé"),
+                error => console.error(error),
             );
-        }        
+        }
 
         if (formbtnReact !== null) {
             formbtnReact.addEventListener('click', sendEmail)
@@ -206,7 +209,7 @@ class Modal_contact extends React.Component {
                     <div className="modal-content border border-white">
                         <div className="modal-header bg-primary">
                             <h1 className="modal-title fs-5" id="staticBackdropReactLabel">Faisons connaissance</h1>
-                            <button type="button" className="btn-close closeReact" data-bs-dismiss="modal"
+                            <button type="button" className="btn-close btnCloseReact" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
                         <div className="modal-body bg-black">
@@ -214,20 +217,20 @@ class Modal_contact extends React.Component {
                                 <fieldset>
                                     <div className="mb-3">
                                         <label htmlFor="disabledTextInput" className="form-label">Nom & Prenom*</label>
-                                        <input type="text" className="form-control bg-secondary nomPrenom" required />
+                                        <input type="text" className="form-control bg-secondary nomPrenomReact" required />
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="disabledTextInput" className="form-label">Email*</label>
                                         <input type="text" id="disabledTextInput"
-                                            className="form-control bg-secondary email" required />
+                                            className="form-control bg-secondary emailReact" required />
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="disabledTextInput" className="form-label">Telephone</label>
-                                        <input type="tel" className="form-control bg-secondary" />
+                                        <input type="tel" className="form-control bg-secondary telReact" />
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="disabledTextInput" className="form-label">Votre message*</label>
-                                        <textarea className="form-control bg-secondary msg" type="text"
+                                        <textarea className="form-control bg-secondary msgReact" type="text"
                                             required></textarea>
                                     </div>
                                 </fieldset>

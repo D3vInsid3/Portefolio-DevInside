@@ -3,6 +3,9 @@
   --color2: #42EC9C;
   --color3: #ffffff;
   --color4: #0D6EFD;
+  --color5: #8656DF;
+  --color6: #339C9A;
+  --color7: #0D1116;
 }
 
 .special-font {
@@ -11,7 +14,7 @@
 }
 
 .react-font {
-  font-family: "Anta", sans-serif;
+  font-family: "Teko", sans-serif;
   color: var(--color2);
 }
 
@@ -106,7 +109,7 @@ img[alt="photo de profile pixel"]:active {
 }
 
 .bg-react {
-  background-color: #020621;
+  background-color: #0D1116;
 }
 
 .bg-card {
@@ -117,4 +120,17 @@ img[alt="photo de profile pixel"]:active {
   border: 5px solid #121746 ;        
 }
 
+.bg_card_bento {
+  background: rgb(13,17,22);
+  background: linear-gradient(304deg, rgba(13,17,22,0.87718837535014) 6%, rgba(134,86,223,1) 95%);
+}
+
+.wrapper{
+  display: grid;
+  margin: 0 auto;
+  max-width: 1296px;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+}
 

@@ -30,13 +30,13 @@ class Presentation extends React.Component {
 class Reconversion extends React.Component {
     render() {
         return (
-            <div className="bg-react text-white">
-                <div className="bg-react container center specific-font m-0 p-0">
-                    <h2 className="secondary-color m-1" style={{ fontSize: "4rem" }}>Ma reconversion</h2>
+            <div>
+                <div className="container center m-0 p-0">
+                    <h2 className="secondary-color text-center m-1" style={{ fontSize: "4rem" }}>Ma reconversion</h2>
                 </div>
                 <a href="https://oclock.io/" target="_blank"><img src="./src/logo_oclock.png" alt="logo O'clock"
                     className="img-fluid mx-auto d-block m-5" width="150" /></a>
-                <div className="container m-3">
+                <div className="container">
                     <h2 className="text-center">Formation de concepteur développeur d'application</h2>
                     <p className="text-center m-0">10 mois dont 2 en stage</p>
                     <p className="text-center m-0">RNCP niveau 6 obtenu en Décembre 2024</p>
@@ -44,7 +44,7 @@ class Reconversion extends React.Component {
                 <div className="text-center mb-3">----</div>
                 <div className="container">
                     <h3 className="text-center">En quelques mots</h3>
-                    <div className="d-flex gap-5 m-5 justify-content-md-center">
+                    <div className="d-flex gap-5 m-3 justify-content-md-center">
                         <div>
                             <ul>
                                 <li>Algorithmie</li>
@@ -80,33 +80,34 @@ class Reconversion extends React.Component {
 class Skills extends React.Component {
     render() {
         return (
-            <div className="bg-react text-white">
-                <div className="container bg-react center specific-font m-0 p-0">
+            <div>
+                <div className="container center m-0 p-0">
                     <h2 className="secondary-color m-1" style={{ fontSize: "4rem" }}>Mes skills</h2>
                 </div>
-                <div className="container d-flex justify-content-center gap-5 mt-5">
-                    <div>
+                <div className="container d-flex justify-content-center gap-3 mt-3">
+                    <div className="">
                         <h3 className="text-center">Front-end</h3>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>React</li>
+                        <ul className="center p-0" style={{ listStyle: "none" }}>
+                            <li><i class="fa-brands fa-html5 fa-3x"></i></li>
+                            <li><i class="fa-brands fa-css3-alt fa-3x"></i></li>
+                            <li><i class="fa-brands fa-js fa-3x"></i></li>
+                            <li><i class="fa-brands fa-react fa-3x"></i></li>
+
                         </ul>
                     </div>
                     <div>
                         <h3 className="text-center">Back-end</h3>
-                        <ul>
-                            <li>Firebase</li>
-                            <li>MangoDB</li>
+                        <ul className="center p-0" style={{ listStyle: "none" }}>
+                            <li><img src="./src/firebase_icon.png" alt="logo FireBase" width="50" /></li>
+                            <li><img src="./src/mangoDB_icon.png" alt="logo MangoDB" width="50" /></li>
                         </ul>
                     </div>
-                    <div>
+                    <div className="">
                         <h3 className="text-center">Autres</h3>
-                        <ul>
-                            <li>Hostinger</li>
-                            <li>Github</li>
-                            <li>Wordpress</li>
+                        <ul className="center p-0" style={{ listStyle: "none" }}>
+                            <li><img src="./src/hostinger_icon.png" alt="logo Hostinger" width="50" /></li>
+                            <li><i class="fa-brands fa-github fa-3x"></i></li>
+                            <li><i class="fa-brands fa-wordpress fa-3x"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -139,11 +140,11 @@ class Projet_card extends React.Component {
 class Projets extends React.Component {
     render() {
         return (
-            <div className="bg-react text-white">
-                <div className="container bg-react center specific-font m-0 p-0">
-                    <h2 className="secondary-color m-1" style={{ fontSize: "4rem" }}>Mes Projets</h2>
+            <div>
+                <div className="center m-0 p-0">
+                    <h2 className="m-1" style={{ fontSize: "4rem" }}>Mes Projets</h2>
                 </div>
-                <div className="container d-flex gap-5 mt-5">
+                <div className="center gap-3">
                     <Projet_card title="Rev'Rie" subtitle="Institut de prothésie ongulaire" text="Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
                         SEO...)" link="http://rev-rie.fr" img="./src/capture_revrie.png" alt_img="illustration du site Rev-rie.fr" />
                     <Projet_card title="Golf Flaine LCZ" subtitle="Le golf au coeur du 74" text="Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
@@ -159,14 +160,13 @@ class Projets extends React.Component {
 class Btn_contact extends React.Component {
     render() {
         return (
-            <div className="d-flex justify-content-center gap-5 m-5">
+            <div className="d-flex justify-content-center gap-3 m-3">
                 <a href="https://linkedin.com/in/dufourd" target="_blank"><button type="button"
-                    className="btn btn-primary"><i className="bi bi-linkedin m-2"></i>Linkedin</button></a>
+                    className="btn btn-primary"><i class="fa-brands fa-linkedin"></i>Linkedin</button></a>
                 <a href="https://github.com/D3vInsid3" target="_blank"><button type="button"
-                    className="btn btn-primary"><i className="bi bi-github m-2"></i>Github</button> </a>
+                    className="btn btn-primary"><i class="fa-brands fa-github"></i>Github</button> </a>
                 <a href="mailto:d.dufour@hotmail.fr?subject=Objet%20du%20message&body=Corps%20du%20message"
-                    target="_blank"><button type="button" className="btn btn-primary"><i
-                        className="bi bi-envelope m-2"></i>d.dufour@hotmail.fr</button> </a>
+                    target="_blank"><button type="button" className="btn btn-primary"><i class="fa-solid fa-envelope"></i>d.dufour@hotmail.fr</button> </a>
             </div>
         );
     }
@@ -207,12 +207,12 @@ class Modal_contact extends React.Component {
                 tabIndex="-1" aria-labelledby="staticBackdropReactLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content border border-white">
-                        <div className="modal-header bg-primary">
+                        <div className="modal-header bg_card_bento">
                             <h1 className="modal-title fs-5" id="staticBackdropReactLabel">Faisons connaissance</h1>
                             <button type="button" className="btn-close btnCloseReact" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
-                        <div className="modal-body bg-black">
+                        <div className="modal-body bg-react">
                             <form className="contact_form" action="#">
                                 <fieldset>
                                     <div className="mb-3">
@@ -237,7 +237,7 @@ class Modal_contact extends React.Component {
                                 <p className="pt-3">* Required</p>
                             </form>
                         </div>
-                        <div className="modal-footer bg-primary">
+                        <div className="modal-footer bg_card_bento">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="submit" className="btn btn-secondary btn_modal_react" onClick={sendEmail}>Envoyer</button>
                         </div>
@@ -251,34 +251,123 @@ class Modal_contact extends React.Component {
 class Contact extends React.Component {
     render() {
         return (
-            <div className="bg-react text-white">
-                <div className="container bg-react center specific-font m-0 p-0">
-                    <h2 className="secondary-color m-1" style={{ fontSize: "4rem" }}>Contact</h2>
+            <div className="d-flex justify-content-around mt-1">
+                <div className="center">
+                    <h2 className="" style={{ fontSize: "4rem" }}>Contact</h2>
                 </div>
-                <div className="center m-5">
+                <div className="center">
                     <button type="button" className="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdropReact">
+                        data-bs-target="#staticBackdropReact" style={{ width: "300px" }}>
                         Me laisser un message
                     </button>
                 </div>
-                <p className="center">Ou contactez moi directement sur mes reseaux sociaux.</p>
-                <Btn_contact />
                 <Modal_contact />
             </div>
         );
     }
 }
 
+class Bulle_Bento extends React.Component {
+    render() {
+        const { bulleW, bulleH } = this.props
+        return (
+            <div className="bg-react m-3">
+                <div className=" bg_card_bento border border-white rounded-end rounded-5 react-font text-white m-0 p-0" style={{ width: bulleW, height: bulleH }}>
+                    <div className="">
+                        <div className="center p-3">
+                            <img className="rounded img-fluid" src="./src/Photo_1.jpg" alt="photo David" width="150" />
+                        </div>
+                        <div className="center">
+                            <h1 className="p-0 m-0">DUFOUR David</h1>
+                            <p className="fs-3 p-0 m-0">38ans</p>
+                            <p className="fs-3 p-0 m-0">Groisy 74</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+class Bulle_Bento_test extends React.Component {
+    render() {
+        const { bulleW, bulleH, borderConfig, children } = this.props
+        return (
+            <div className="bg-react m-0 p-0">
+                <div className="react-font text-white m-0 p-0" style={{ width: bulleW, height: bulleH }}>
+                    <div className={`bg_card_bento ${borderConfig}`} style={{ width: bulleW, height: bulleH }}>
+                        {children}
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+class MargeTop extends React.Component {
+    render() {
+        return (
+            <div className="" style={{ height: '100px' }}></div>
+        );
+    }
+}
+
+class Grid extends React.Component {
+    render() {
+        const { gridC, gridR, borderConfig, children, number } = this.props
+        return (
+            <div id={number} className={`text-white border border-white bg_card_bento ${borderConfig}`} style={{ gridColumn: gridC, gridRow: gridR }}>
+                {children}
+            </div>
+        );
+    }
+}
+
+
 class App extends React.Component {
     render() {
         return (
-            <div className="container react-font">
-                <Presentation />
-                <Reconversion />
-                <Skills />
-                <Projets />
-                <Contact />
-            </div>
+            <div className="mb-5">
+                <MargeTop />
+                <div className="wrapper m-0 p-0">
+                    <Grid gridC="1/4" gridR="1/3" number="1" borderConfig='rounded-5'>
+                        <div className="center m-3">
+                            <img className="rounded img-fluid" src="./src/Photo_1.jpg" alt="photo David" width="100" />
+                        </div>
+                        <div className="center">
+                            <h1>DUFOUR David</h1>
+                            <h2>38 ans</h2>
+                            <h2>Groisy 74</h2>
+                        </div>
+                    </Grid>
+                    <Grid gridC="4/7" gridR="" number="2" borderConfig='rounded-5'>
+                        <div className="row">
+                            <div className="center col m-0 p-0">
+                                <img className="rounded img-fluid" src="./src/logo2.png" alt="logo DevInside" width="100" />
+                            </div>
+                            <div className="center col">
+                                <h1>DevInside</h1>
+                            </div>
+                            <h2 className="text-center">Votre vision, notre expertise.</h2>
+                        </div>
+                    </Grid>
+                    <Grid gridC="7/10" gridR="1/6" number="3" borderConfig='rounded-5'>
+                        <Reconversion />
+                    </Grid>
+                    <Grid gridC="4/7" gridR="" number="4" borderConfig='rounded-5'>
+                        <Btn_contact />
+                    </Grid>
+                    <Grid gridC="1/7" gridR="3/8" number="5" borderConfig='rounded-5'>
+                        <Projets />
+                    </Grid>
+                    <Grid gridC="7/10" gridR="6/8" number="6" borderConfig='rounded-5'>
+                        <Skills />
+                    </Grid>
+                    <Grid gridC="1/11" gridR="" number="7" borderConfig='rounded-5'>
+                        <Contact />
+                    </Grid>
+                </div>
+            </div >
         );
     }
 }

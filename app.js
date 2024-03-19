@@ -27,6 +27,39 @@ class Presentation extends React.Component {
     }
 }
 
+class PresentationSimple extends React.Component {
+    render() {
+        return (
+            <div>
+                <div className="center m-3">
+                    <img className="rounded img-fluid" src="./src/Photo_1.jpg" alt="photo David" width="100" />
+                </div>
+                <div className="center">
+                    <h1>DUFOUR David</h1>
+                    <h2>38 ans</h2>
+                    <h2>Groisy 74</h2>
+                </div>
+            </div>
+        );
+    }
+}
+
+class PresentationDevInside extends React.Component {
+    render() {
+        return (
+            <div className="row">
+                <div className="center col m-0 p-0">
+                    <img className="rounded img-fluid" src="./src/logo2.png" alt="logo DevInside" width="100" />
+                </div>
+                <div className="center col">
+                    <h1>DevInside</h1>
+                </div>
+                <h2 className="text-center">Votre vision, notre expertise.</h2>
+            </div>
+        );
+    }
+}
+
 class Reconversion extends React.Component {
     render() {
         return (
@@ -88,10 +121,10 @@ class Skills extends React.Component {
                     <div className="">
                         <h3 className="text-center">Front-end</h3>
                         <ul className="center p-0" style={{ listStyle: "none" }}>
-                            <li><i class="fa-brands fa-html5 fa-3x"></i></li>
-                            <li><i class="fa-brands fa-css3-alt fa-3x"></i></li>
-                            <li><i class="fa-brands fa-js fa-3x"></i></li>
-                            <li><i class="fa-brands fa-react fa-3x"></i></li>
+                            <li><i className="fa-brands fa-html5 fa-3x"></i></li>
+                            <li><i className="fa-brands fa-css3-alt fa-3x"></i></li>
+                            <li><i className="fa-brands fa-js fa-3x"></i></li>
+                            <li><i className="fa-brands fa-react fa-3x"></i></li>
 
                         </ul>
                     </div>
@@ -106,8 +139,8 @@ class Skills extends React.Component {
                         <h3 className="text-center">Autres</h3>
                         <ul className="center p-0" style={{ listStyle: "none" }}>
                             <li><img src="./src/hostinger_icon.png" alt="logo Hostinger" width="50" /></li>
-                            <li><i class="fa-brands fa-github fa-3x"></i></li>
-                            <li><i class="fa-brands fa-wordpress fa-3x"></i></li>
+                            <li><i className="fa-brands fa-github fa-3x"></i></li>
+                            <li><i className="fa-brands fa-wordpress fa-3x"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -162,11 +195,11 @@ class Btn_contact extends React.Component {
         return (
             <div className="d-flex justify-content-center gap-3 m-3">
                 <a href="https://linkedin.com/in/dufourd" target="_blank"><button type="button"
-                    className="btn btn-primary"><i class="fa-brands fa-linkedin"></i>Linkedin</button></a>
+                    className="btn btn-primary"><i className="fa-brands fa-linkedin"></i>Linkedin</button></a>
                 <a href="https://github.com/D3vInsid3" target="_blank"><button type="button"
-                    className="btn btn-primary"><i class="fa-brands fa-github"></i>Github</button> </a>
+                    className="btn btn-primary"><i className="fa-brands fa-github"></i>Github</button> </a>
                 <a href="mailto:d.dufour@hotmail.fr?subject=Objet%20du%20message&body=Corps%20du%20message"
-                    target="_blank"><button type="button" className="btn btn-primary"><i class="fa-solid fa-envelope"></i>d.dufour@hotmail.fr</button> </a>
+                    target="_blank"><button type="button" className="btn btn-primary"><i className="fa-solid fa-envelope"></i>d.dufour@hotmail.fr</button> </a>
             </div>
         );
     }
@@ -267,47 +300,10 @@ class Contact extends React.Component {
     }
 }
 
-class Bulle_Bento extends React.Component {
-    render() {
-        const { bulleW, bulleH } = this.props
-        return (
-            <div className="bg-react m-3">
-                <div className=" bg_card_bento border border-white rounded-end rounded-5 react-font text-white m-0 p-0" style={{ width: bulleW, height: bulleH }}>
-                    <div className="">
-                        <div className="center p-3">
-                            <img className="rounded img-fluid" src="./src/Photo_1.jpg" alt="photo David" width="150" />
-                        </div>
-                        <div className="center">
-                            <h1 className="p-0 m-0">DUFOUR David</h1>
-                            <p className="fs-3 p-0 m-0">38ans</p>
-                            <p className="fs-3 p-0 m-0">Groisy 74</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
-
-class Bulle_Bento_test extends React.Component {
-    render() {
-        const { bulleW, bulleH, borderConfig, children } = this.props
-        return (
-            <div className="bg-react m-0 p-0">
-                <div className="react-font text-white m-0 p-0" style={{ width: bulleW, height: bulleH }}>
-                    <div className={`bg_card_bento ${borderConfig}`} style={{ width: bulleW, height: bulleH }}>
-                        {children}
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
-
 class MargeTop extends React.Component {
     render() {
         return (
-            <div className="" style={{ height: '100px' }}></div>
+            <div className="" style={{ height: '200px' }}></div>
         );
     }
 }
@@ -323,13 +319,41 @@ class Grid extends React.Component {
     }
 }
 
-
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            windowWidth: window.innerWidth,
+        };
+        this.handleResize = this.handleResize.bind(this);
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.handleResize);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleResize);
+    }
+
+    handleResize() {
+        this.setState({
+            windowWidth: window.innerWidth,
+        });
+    }
     render() {
-        return (
-            <div className="mb-5">
-                <MargeTop />
-                <div className="wrapper m-0 p-0">
+        const { windowWidth } = this.state;
+        const xS = windowWidth < 576;
+        const sM = windowWidth >= 576 && windowWidth < 768;
+        const mD = windowWidth >= 768 && windowWidth < 992;
+        const lG = windowWidth >= 992 && windowWidth < 1200;
+        const xL = windowWidth >= 1200;
+
+        let content = (<div></div>);
+
+        if (xL) {
+            content = (
+                <div className="wrapper m-xl-3 m-xxl-5 p-0" style={{ maxWidth: "1500px" }}>
                     <Grid gridC="1/4" gridR="1/3" number="1" borderConfig='rounded-5'>
                         <div className="center m-3">
                             <img className="rounded img-fluid" src="./src/Photo_1.jpg" alt="photo David" width="100" />
@@ -367,6 +391,117 @@ class App extends React.Component {
                         <Contact />
                     </Grid>
                 </div>
+            );
+        } else if (lG) {
+            content = (
+                <div className="wrapper m-lg-3 p-0" style={{ maxWidth: "1200px" }}>
+                    <Grid gridC="1/4" gridR="1/3" number="1" borderConfig='rounded-5'>
+                        <PresentationSimple />
+                    </Grid>
+                    <Grid gridC="4/7" gridR="" number="2" borderConfig='rounded-5'>
+                        <PresentationDevInside />
+                    </Grid>
+                    <Grid gridC="7/10" gridR="1/6" number="3" borderConfig='rounded-5'>
+                        <Reconversion />
+                    </Grid>
+                    <Grid gridC="4/7" gridR="" number="4" borderConfig='rounded-5'>
+                        <Btn_contact />
+                    </Grid>
+                    <Grid gridC="1/7" gridR="3/8" number="5" borderConfig='rounded-5'>
+                        <Projets />
+                    </Grid>
+                    <Grid gridC="7/10" gridR="6/8" number="6" borderConfig='rounded-5'>
+                        <Skills />
+                    </Grid>
+                    <Grid gridC="1/11" gridR="" number="7" borderConfig='rounded-5'>
+                        <Contact />
+                    </Grid>
+                </div>
+            );
+        } else if (mD) {
+            content = (
+                <div className="wrapper m-0 p-0" style={{ maxWidth: "992px", minWidth: "768px" }}>
+                    <Grid gridC="1/4" gridR="1/3" number="1" borderConfig='rounded-5'>
+                        <PresentationSimple />  
+                    </Grid>
+                    <Grid gridC="4/10" gridR="1/4" number="2" borderConfig='rounded-5'>
+                        <Reconversion />    
+                    </Grid>
+                    <Grid gridC="1/4" gridR="" number="3" borderConfig='rounded-5'>
+                        <PresentationDevInside />
+                    </Grid>
+                    <Grid gridC="1/4" gridR="" number="4" borderConfig='rounded-5'>
+                        <Btn_contact />
+                    </Grid>
+                    <Grid gridC="1/4" gridR="5/8" number="5" borderConfig='rounded-5'>
+                        <Skills />
+                    </Grid>
+                    <Grid gridC="1/10" gridR="" number="6" borderConfig='rounded-5'>
+                        <Contact />
+                    </Grid>
+                    <Grid gridC="4/10" gridR="4/8" number="7" borderConfig='rounded-5'>
+                        <Projets />
+                    </Grid>
+                </div>
+            );
+        } else if (sM) {
+            content = (
+                <div className="wrapper m-0 p-0" style={{ maxWidth: "768px", minWidth: "576px" }}>
+                    <Grid gridC="1/4" gridR="1/3" number="1" borderConfig='rounded-5'>
+                        <PresentationSimple />
+                    </Grid>
+                    <Grid gridC="4/10" gridR="1/4" number="2" borderConfig='rounded-5'>
+                        <Reconversion />    
+                    </Grid>
+                    <Grid gridC="1/4" gridR="" number="3" borderConfig='rounded-5'>
+                        <PresentationDevInside />
+                    </Grid>
+                    <Grid gridC="1/4" gridR="" number="4" borderConfig='rounded-5'>
+                        <Btn_contact />
+                    </Grid>
+                    <Grid gridC="1/4" gridR="5/8" number="5" borderConfig='rounded-5'>
+                        <Skills />
+                    </Grid>
+                    <Grid gridC="1/10" gridR="" number="6" borderConfig='rounded-5'>
+                        <Contact />
+                    </Grid>
+                    <Grid gridC="4/10" gridR="4/8" number="7" borderConfig='rounded-5'>
+                        <Projets />
+                    </Grid>
+                </div>
+            );
+        } else if (xS) {
+            content = (
+                <div className="wrapper m-1 p-0" style={{ maxWidth: "576px", minWidth: "500px" }}>
+                    <Grid gridC="1/10" gridR="1/3" number="1" borderConfig='rounded-5'>
+                        <PresentationSimple />
+                    </Grid>
+                    <Grid gridC="1/5" gridR="" number="2" borderConfig='rounded-5'>
+                        <Btn_contact />
+                    </Grid>
+                    <Grid gridC="5/10" gridR="" number="3" borderConfig='rounded-5'>
+                        <PresentationDevInside />
+                    </Grid>
+                    <Grid gridC="1/10" gridR="4/7" number="4" borderConfig='rounded-5'>
+                        <Reconversion />    
+                    </Grid>
+                    <Grid gridC="1/10" gridR="" number="5" borderConfig='rounded-5'>
+                        <Skills />
+                    </Grid>
+                    <Grid gridC="1/10" gridR="8/12" number="6" borderConfig='rounded-5'>
+                        <Projets />
+                    </Grid>
+                    <Grid gridC="1/10" gridR="" number="7" borderConfig='rounded-5'>
+                        <Contact />
+                    </Grid>
+                </div>
+            );
+        }
+        return (
+            <div className="mb-5">
+                <MargeTop />
+                {content}
+
             </div >
         );
     }

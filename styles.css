@@ -140,12 +140,21 @@ img[alt="photo de profile pixel"]:active {
   background-color: #f0f6f9;
 }
 
-
 #iconHoverOn {
   color: black;
 }
 
 #iconHoverOn:hover {
   color: #bfd0d8;
+}
+
+#btnHoverOn {
+ background-color: white; 
+}
+
+#btnHoverOn:hover {
+ background-color: #bfd0d8;
+ color: black;
+
 }
 

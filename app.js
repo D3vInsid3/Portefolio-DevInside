@@ -3,7 +3,7 @@ class PresentationSimple extends React.Component {
         return (
             <div>
                 <div className="center m-3">
-                    <img className="rounded img-fluid" src="./src/Photo_1.jpg" alt="photo David" width="100" />
+                    <img id="top" className="rounded img-fluid" src="./src/Photo_1.jpg" alt="photo David" width="100" />
                 </div>
                 <div className="center text-center">
                     <h1>DUFOUR David</h1>
@@ -18,11 +18,12 @@ class PresentationSimple extends React.Component {
 class PresentationDevInside extends React.Component {
     render() {
         return (
-            <div className="">
-                <div className="center  m-0 p-0">
+            <div className="d-flex flex-column justify-content-center gap-1 mt-1">
+                <div className="center">
                     <img className="rounded img-fluid" src="./src/logo2.png" alt="logo DevInside" width="100" />
                 </div>
                 <h2 className="text-center">Votre vision, notre expertise.</h2>
+                <p className="text-center fs-4">~ Mon projet de micro-entreprise ~</p>
             </div>
         );
     }
@@ -45,7 +46,7 @@ class Reconversion extends React.Component {
                 <div className="text-center mb-3">----</div>
                 <div className="container">
                     <h3 className="text-center">En quelques mots</h3>
-                    <div className="d-flex gap-5 m-3 justify-content-md-center">
+                    <div className="d-flex gap-5 m-3 justify-content-center">
                         <div>
                             <ul>
                                 <li>Algorithmie</li>
@@ -67,7 +68,8 @@ class Reconversion extends React.Component {
                     </div>
                     <div className="d-flex center gap-5 m-5">
                         <a href="https://oclock.io/formations/concepteur-developpeur-initial" target="_blank"><button
-                            type="button" className="btn btn-primary">En savoir plus</button></a>
+                            type="button" className="btn btn-outline-primary border border-1" id="btnHoverOn">
+                             En savoir plus</button></a>
                     </div>
                     <div className="d-flex flex-row-reverse">
                         <p>Merci à eux :)</p>
@@ -90,26 +92,26 @@ class Skills extends React.Component {
                     <div className="">
                         <h3 className="text-center">Front-end</h3>
                         <ul className="center p-0" style={{ listStyle: "none" }}>
-                            <li className="m-1"><i className="fa-brands fa-html5 fa-3x"></i></li>
-                            <li className="m-1"><i className="fa-brands fa-css3-alt fa-3x"></i></li>
-                            <li className="m-1"><i className="fa-brands fa-js fa-3x"></i></li>
-                            <li className="m-1"><i className="fa-brands fa-react fa-3x"></i></li>
+                            <li className="m-1"><i className="fa-brands fa-html5 fa-3x" title="HTML5"></i></li>
+                            <li className="m-1"><i className="fa-brands fa-css3-alt fa-3x" title="CSS"></i></li>
+                            <li className="m-1"><i className="fa-brands fa-js fa-3x" title="Javascript"></i></li>
+                            <li className="m-1"><i className="fa-brands fa-react fa-3x" title="React"></i></li>
 
                         </ul>
                     </div>
                     <div>
                         <h3 className="text-center">Back-end</h3>
                         <ul className="center p-0" style={{ listStyle: "none" }}>
-                            <li className="m-1"><img src="./src/firebase_icon.png" alt="logo FireBase" width="50" /></li>
-                            <li className="m-1"><img src="./src/mangoDB_icon.png" alt="logo MangoDB" width="50" /></li>
+                            <li className="m-1"><img src="./src/firebase_icon.png" alt="logo FireBase" width="65" title="Firebase" /></li>
+                            <li className="m-1"><img src="./src/mangoDB_icon.png" alt="logo MangoDB" width="65" title="MangoDB" /></li>
                         </ul>
                     </div>
                     <div className="">
                         <h3 className="text-center">Autres</h3>
                         <ul className="center p-0" style={{ listStyle: "none" }}>
-                            <li className="m-1"><img src="./src/hostinger_icon.png" alt="logo Hostinger" width="50" /></li>
-                            <li className="m-1"><i className="fa-brands fa-github fa-3x"></i></li>
-                            <li className="m-1"><i className="fa-brands fa-wordpress fa-3x"></i></li>
+                            <li className="m-1"><img src="./src/hostinger_icon.png" alt="logo Hostinger" width="50" title="Hostinger" /></li>
+                            <li className="m-1"><i className="fa-brands fa-github fa-3x" title="GitHub"></i></li>
+                            <li className="m-1"><i className="fa-brands fa-wordpress fa-3x" title="Wordpress"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -152,7 +154,9 @@ class Projets extends React.Component {
                     <Projet_card title="Golf Flaine LCZ" subtitle="Le golf au coeur du 74" text="Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
                         SEO...)" link="http://golf-flaine-lescarroz.fr" img="./src/capture_golf.png" alt_img="illustration du site du Golf de Flaine" />
                     <Projet_card title="DevInside" subtitle="Personnal Portfolio" text="Portefolio de mes projets avec double affichage, classique HTML/CSS/JS & Moderne en React"
-                        link="https://d3vinsid3.github.io/Portefolio-DevInside/" img="./src/capture_devinside.png" alt_img="illustration du site DevInside" />
+                        link="https://d3vinsid3.github.io/Portefolio-DevInside/" img="./src/capture_Devinside.png" alt_img="illustration du site DevInside" />
+                        <Projet_card title="Autre" subtitle="Autre projet à ajouter" text="Ajouter ici un des projets fait durant la formation O'Clock, idéalement un sujet fullstack"
+                        link="https://d3vinsid3.github.io/Portefolio-DevInside/" img="./src/capture_Devinside.png" alt_img="illustration du projet O'Clock" />
                 </div>
             </div>
         );
@@ -201,7 +205,7 @@ class Modal_contact extends React.Component {
 
         if (formbtnReact !== null) {
             formbtnReact.addEventListener('click', sendEmail)
-        }
+        }        
 
         return (
             <div className="modal fade" id="staticBackdropReact" data-bs-backdrop="static" data-bs-keyboard="false"
@@ -257,9 +261,9 @@ class Contact extends React.Component {
                     <h2 className="" >Contact</h2>
                 </div>
                 <div className="center">
-                    <button type="button" className="btn btn-primary" data-bs-toggle="modal"
+                    <button type="button" id="btnHoverOn" className="btn btn-outline-primary border border-1" data-bs-toggle="modal"
                         data-bs-target="#staticBackdropReact">
-                        Me laisser un message
+                        Vous avez des projets
                     </button>
                 </div>
                 <Modal_contact />
@@ -341,6 +345,29 @@ class App extends React.Component {
 
         let content = (<div></div>);
 
+        const scrollToTop = () => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          };
+
+        const mainBody = document.querySelector('body');
+        function showOldSection(e) {  
+            window.scrollTo({top: 0});                              
+            document.querySelector('#old').hidden = false;
+            document.querySelector('#new').hidden = true;
+            mainBody.classList.add('specific-bg');
+            mainBody.classList.add('special-font');
+            mainBody.classList.remove('react-font-secondary');
+            mainBody.classList.remove('specific-bg-2');
+            mainBody.classList.remove('react-font');
+            mainBody.classList.remove('text-dark');
+            mainBody.classList.remove('fs-2');            
+            document.querySelector(".fixed-top").hidden = false;
+        };                
+             
+
         if (xL) {
             content = (
                 <div className="wrapper m-xl-3 m-xxl-5 p-0" style={{ maxWidth: "1500px" }}>
@@ -354,7 +381,7 @@ class App extends React.Component {
                         <Reconversion />
                     </Grid>
                     <Grid gridC="4/7" gridR="" hoverOn="" classConfig='center rounded-5'>
-                        <Btn_contact classConfig='fa-2x' gapConfig='gap-5' />
+                        <Btn_contact classConfig='fa-2xl' gapConfig='gap-5' />
                     </Grid>
                     <Grid gridC="1/7" gridR="3/8" hoverOn="" classConfig='rounded-5'>
                         <Projets />
@@ -362,8 +389,16 @@ class App extends React.Component {
                     <Grid gridC="7/10" gridR="6/8" hoverOn="" classConfig='rounded-5'>
                         <Skills gapConfig='gap-5' />
                     </Grid>
-                    <Grid gridC="1/11" gridR="" hoverOn="" classConfig='rounded-5'>
+                    <Grid gridC="1/2" gridR="" hoverOn="" classConfig='rounded-5 center'>
+                        <div className="center">
+                            <i className="fa-regular fa-backward-fast fa-lg" id="iconHoverOn" title="Retour" onClick={showOldSection}></i>
+                        </div>
+                    </Grid><Grid gridC="2/9" gridR="" hoverOn="" classConfig='rounded-5'>
                         <Contact />
+                    </Grid><Grid gridC="9/10" gridR="" hoverOn="" classConfig='rounded-5 center'>
+                        <div className="center">
+                           <i className="fa-solid fa-circle-arrow-up fa-xl" id="iconHoverOn" onClick={scrollToTop}></i>
+                        </div>
                     </Grid>
                 </div>
             );
@@ -374,7 +409,7 @@ class App extends React.Component {
                         <PresentationSimple />
                     </Grid>
                     <Grid gridC="1/5" gridR="" number="2" classConfig='center rounded-5'>
-                        <Btn_contact classConfig='fa-2x' gapConfig='gap-3' />
+                        <Btn_contact classConfig='fa-2xl' gapConfig='gap-3' />
                     </Grid>
                     <Grid gridC="5/10" gridR="" number="3" classConfig='rounded-5'>
                         <PresentationDevInside />
@@ -388,14 +423,22 @@ class App extends React.Component {
                     <Grid gridC="1/10" gridR="8/12" number="6" classConfig='rounded-5'>
                         <Projets />
                     </Grid>
-                    <Grid gridC="1/10" gridR="" number="7" classConfig='rounded-5'>
+                    <Grid gridC="1/2" gridR="" hoverOn="" classConfig='rounded-5 center'>
+                        <div className="center">
+                            <i className="fa-regular fa-backward-fast fa-lg" id="iconHoverOn" title="Retour" onClick={showOldSection}></i>
+                        </div>
+                    </Grid><Grid gridC="2/9" gridR="" hoverOn="" classConfig='rounded-5'>
                         <Contact />
+                    </Grid><Grid gridC="9/10" gridR="" hoverOn="" classConfig='rounded-5 center'>
+                        <div className="center">
+                           <i className="fa-solid fa-circle-arrow-up fa-xl" id="iconHoverOn" onClick={scrollToTop}></i>
+                        </div>
                     </Grid>
                 </div>
             );
         }
         return (
-            <div className="mt-5 mb-5 center">                
+            <div className="mt-1 mb-5 center">                
                 {content}
             </div >
         );

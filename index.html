@@ -54,10 +54,10 @@
                 <div class="col-6 col-md-3 col-xl-2">
                     <a class="nav-link text-center" href="#contact">Contact</a>
                 </div>
-                <div class="col-6 col-md-3 col-xl-2">
-                    <div class="form-check form-switch text-center">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label labelBtnReact">En React</label>
+                <div class="col-6 col-md-3 col-xl-2">                    
+                    <div class="d-flex flex-row align-items-center gap-2">
+                        <i class="fa-regular fa-circle-right fa-xl" id="goReactMode" style="color: #0D6EFD"></i>
+                        <p class="p-0 m-0">Mode React</p>
                     </div>
                 </div>
             </div>
@@ -342,7 +342,9 @@
     </footer>
 
     <script defer>
+        document.querySelector('#new').hidden = true;
         const navBar = document.querySelector(".fixed-top");
+        const mainBody = document.querySelector('body');
 
         const updateNavBarHeight = () => {
             const hauteurNavBar = navBar.offsetHeight + 24;
@@ -352,13 +354,13 @@
         const resizeObserver = new ResizeObserver(updateNavBarHeight);
         resizeObserver.observe(navBar);
 
-
         //Send mail        
         const formbtn = document.querySelector('.btn_modal');
         const email = document.querySelector('.email');
         const msg = document.querySelector('.msg');
         const nP = document.querySelector('.nomPrenom');
         const tel = document.querySelector('.tel');
+
         function sendEmail(e) {
             e.preventDefault();
             Email.send({
@@ -372,27 +374,20 @@
                 document.querySelector('.closeOld').click(),
             );
         }
-        formbtn.addEventListener('click', sendEmail);
+        formbtn.addEventListener('click', sendEmail);        
 
-        const mainBody = document.querySelector('body');
-
-        document.querySelector('#new').hidden = true;
-
-        function hideOldSection(e) {
-            if (document.querySelector('#flexSwitchCheckDefault').checked == true) {
-                document.querySelector('#old').hidden = true;
-                document.querySelector('#new').hidden = false;
-                mainBody.classList.remove('specific-bg');
-                mainBody.classList.remove('special-font');
-                mainBody.classList.add('specific-bg-2');
-                mainBody.classList.add('react-font');
-                mainBody.classList.add('text-dark');
-                mainBody.classList.add('fs-2');
-                navBar.hidden = true;
-            }
-        }
-
-        document.querySelector('#flexSwitchCheckDefault').addEventListener('click', hideOldSection);
+        //Go to React section
+        document.getElementById('goReactMode').addEventListener('click', function () {
+            document.querySelector('#old').hidden = true;
+            document.querySelector('#new').hidden = false;
+            mainBody.classList.remove('specific-bg');
+            mainBody.classList.remove('special-font');
+            mainBody.classList.add('specific-bg-2');
+            mainBody.classList.add('react-font');
+            mainBody.classList.add('text-dark');
+            mainBody.classList.add('fs-2');
+            navBar.hidden = true;            
+        });
 
 
     </script>

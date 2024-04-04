@@ -30,6 +30,10 @@
   background-image: url(./src/image-9iw8h2vh.png);
 }
 
+.specific-bg-2 { 
+  background-image: url(./src/image-e52m4n9x.png);
+}
+
    /* Styles clignotement */
 @keyframes clignotement {
     0% { opacity: 1;}
@@ -108,21 +112,8 @@ img[alt="photo de profile pixel"]:active {
   background-position: center;
 }
 
-.bg-react {
-  background-color: #0D1116;
-}
-
-.bg-card {
-  background-color: #121746 ;
-}
-
-.border-circle-2 {
-  border: 5px solid #121746 ;        
-}
-
 .bg_card_bento {
-  background: rgb(13,17,22);
-  background: linear-gradient(304deg, rgba(13,17,22,0.87718837535014) 6%, rgba(134,86,223,1) 95%);
+  background: #ffffff;  
 }
 
 .wrapper{
@@ -132,5 +123,29 @@ img[alt="photo de profile pixel"]:active {
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 10px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+#sectionHoverOn:hover {
+  background-color: #f0f6f9;
+}
+
+
+#iconHoverOn {
+  color: black;
+}
+
+#iconHoverOn:hover {
+  color: #bfd0d8;
 }
 

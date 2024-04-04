@@ -1,32 +1,3 @@
-class Presentation extends React.Component {
-    render() {
-        return (
-            <div className="bg-react text-white">
-                <div className="d-flex justify-content-center m-5 gap-5">
-                    <div className="rounded img-container">
-                        <img className="rounded img-fluid" src="./src/Photo_1.jpg" alt="photo David" width="150" />
-                    </div>
-                    <div className="center">
-                        <img className="img-fluid rounded-circle border-circle-2" src="./src/logo2.png" alt="Logo DevInside" width="150" />
-                    </div>
-                    <div className="center">
-                        <h1 className="fw-bold" style={{ fontSize: "4rem" }}>DUFOUR David</h1>
-                        <h2>alias</h2>
-                        <h2>DEVINDSIDE</h2>
-                        <h2>Votre vision, mon expertise.</h2>
-                    </div>
-                </div>
-                <p className="p-3 mb-0 text-center fs-3">Dans le monde de l'industrie pendant plus de 15 ans j'ai suivi le choix
-                    du <strong>coeur</strong> en me lançant dans une <strong>reconversion</strong> en tant que
-                    développeur web. Aujourdh'ui mon engagement est de vous <strong>accompagner</strong> dans vos projets digitaux.
-                    <br></br>Mais pas seulement... n'hesitez plus et contactez-moi.
-                </p>
-                <Btn_contact />
-            </div>
-        );
-    }
-}
-
 class PresentationSimple extends React.Component {
     render() {
         return (
@@ -34,10 +5,10 @@ class PresentationSimple extends React.Component {
                 <div className="center m-3">
                     <img className="rounded img-fluid" src="./src/Photo_1.jpg" alt="photo David" width="100" />
                 </div>
-                <div className="center">
+                <div className="center text-center">
                     <h1>DUFOUR David</h1>
                     <h2>38 ans</h2>
-                    <h2>Groisy 74</h2>
+                    <h2>Groisy 74 - FRANCE</h2>
                 </div>
             </div>
         );
@@ -47,12 +18,9 @@ class PresentationSimple extends React.Component {
 class PresentationDevInside extends React.Component {
     render() {
         return (
-            <div className="row">
-                <div className="center col m-0 p-0">
+            <div className="">
+                <div className="center  m-0 p-0">
                     <img className="rounded img-fluid" src="./src/logo2.png" alt="logo DevInside" width="100" />
-                </div>
-                <div className="center col">
-                    <h1>DevInside</h1>
                 </div>
                 <h2 className="text-center">Votre vision, notre expertise.</h2>
             </div>
@@ -64,8 +32,8 @@ class Reconversion extends React.Component {
     render() {
         return (
             <div>
-                <div className="container center m-0 p-0">
-                    <h2 className="secondary-color text-center m-1" style={{ fontSize: "4rem" }}>Ma reconversion</h2>
+                <div className="container-fluid center m-0 p-0">
+                    <h2 className="text-dark text-center m-1" style={{ fontSize: "4rem" }}>Ma reconversion</h2>
                 </div>
                 <a href="https://oclock.io/" target="_blank"><img src="./src/logo_oclock.png" alt="logo O'clock"
                     className="img-fluid mx-auto d-block m-5" width="150" /></a>
@@ -112,13 +80,13 @@ class Reconversion extends React.Component {
 
 class Skills extends React.Component {
     render() {
-        const { classConfig, gapConfig } = this.props
+        const { gapConfig } = this.props
         return (
             <div>
-                <div className="container text-center m-0 p-0">
-                    <h2 className="secondary-color m-1" style={{ fontSize: "4rem" }}>Mes skills</h2>
+                <div className="container-fluid text-center m-0 p-0">
+                    <h2 className="text-dark m-1" style={{ fontSize: "4rem" }}>Mes skills</h2>
                 </div>
-                <div className={`container d-flex justify-content-center ${ gapConfig } mt-3`}>
+                <div className={`container d-flex justify-content-center ${gapConfig} mt-3`}>
                     <div className="">
                         <h3 className="text-center">Front-end</h3>
                         <ul className="center p-0" style={{ listStyle: "none" }}>
@@ -154,17 +122,17 @@ class Projet_card extends React.Component {
     render() {
         const { title, subtitle, img, alt_img, link, text } = this.props
         return (
-            <div className="card text-light border border-5" style={{ width: "18rem", backgroundColor: "#121746" }}>
-                <div className="card-body p-1">
+            <div className="text-dark border border-1 rounded-3" id="sectionHoverOn" style={{ width: "100%" }}>
+                <div className="p-1">
                     <h3 className="text-center">{title}</h3>
                     <p className="text-center fs-6">{subtitle}</p>
                 </div>
-                <div className="container">
+                <div className="container center">
                     <a href={link} target="_blank"><img className="img-fluid rounded img-zoom m-1"
                         src={img} alt={alt_img} width="600" /></a>
                 </div>
-                <div className="card-body">
-                    <p className="card-text text-center fs-6">{text}</p>
+                <div className="">
+                    <p className="text-center fs-6">{text}</p>
                 </div>
             </div>
         )
@@ -178,7 +146,7 @@ class Projets extends React.Component {
                 <div className="center m-0 p-0">
                     <h2 className="m-1" style={{ fontSize: "4rem" }}>Mes Projets</h2>
                 </div>
-                <div className="center gap-3">
+                <div className="vstack center gap-5 mt-5 p-3">
                     <Projet_card title="Rev'Rie" subtitle="Institut de prothésie ongulaire" text="Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
                         SEO...)" link="http://rev-rie.fr" img="./src/capture_revrie.png" alt_img="illustration du site Rev-rie.fr" />
                     <Projet_card title="Golf Flaine LCZ" subtitle="Le golf au coeur du 74" text="Site vitrine réalisé avec WordPress, projet avec accompagnement total (DA,
@@ -195,11 +163,11 @@ class Btn_contact extends React.Component {
     render() {
         const { classConfig, gapConfig } = this.props
         return (
-            <div className={`d-flex justify-content-center ${ gapConfig } m-3`}>
-                <a href="https://linkedin.com/in/dufourd" target="_blank"><i className={`fa-brands fa-linkedin ${ classConfig }`}></i></a>
-                <a href="https://github.com/D3vInsid3" target="_blank"><i className={`fa-brands fa-github ${ classConfig }`}></i></a>
+            <div className={`d-flex justify-content-center ${gapConfig} m-3`}>
+                <a href="https://linkedin.com/in/dufourd" target="_blank"><i className={`fa-brands fa-linkedin ${classConfig}`} id="iconHoverOn"></i></a>
+                <a href="https://github.com/D3vInsid3" target="_blank"><i className={`fa-brands fa-github ${classConfig}`} id="iconHoverOn"></i></a>
                 <a href="mailto:d.dufour@hotmail.fr?subject=Objet%20du%20message&body=Corps%20du%20message"
-                    target="_blank"><i className={`fa-solid fa-envelope ${ classConfig }`}></i></a>
+                    target="_blank"><i className={`fa-solid fa-envelope ${classConfig}`} id="iconHoverOn"></i></a>
             </div>
         );
     }
@@ -284,13 +252,13 @@ class Modal_contact extends React.Component {
 class Contact extends React.Component {
     render() {
         return (
-            <div className="d-flex justify-content-around mt-1">
+            <div className="center d-flex justify-content-around mt-1">
                 <div className="center">
-                    <h2 className="" style={{ fontSize: "4rem" }}>Contact</h2>
+                    <h2 className="" >Contact</h2>
                 </div>
                 <div className="center">
                     <button type="button" className="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdropReact" style={{ width: "300px" }}>
+                        data-bs-target="#staticBackdropReact">
                         Me laisser un message
                     </button>
                 </div>
@@ -301,18 +269,41 @@ class Contact extends React.Component {
 }
 
 class MargeTop extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            navBarHeight: document.querySelector("#navbar").offsetHeight,
+        };
+        this.handleResizeHeight = this.handleResizeHeight.bind(this);
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.handleResizeHeight);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleResizeHeight);
+    }
+
+    handleResizeHeight() {
+        this.setState({
+            navBarHeight: document.querySelector("#navbar").offsetHeight,
+        });
+    }
+    
     render() {
+        const { navBarHeight } = this.state;        
         return (
-            <div className="" style={{ height: '200px' }}></div>
+            <div id="topDivReact" className="mt-1" style={{ height: navBarHeight }}></div>
         );
     }
 }
 
 class Grid extends React.Component {
     render() {
-        const { gridC, gridR, classConfig, children, number } = this.props
+        const { gridC, gridR, classConfig, children, hoverOn } = this.props
         return (
-            <div id={number} className={`text-white border border-white bg_card_bento ${classConfig}`} style={{ gridColumn: gridC, gridRow: gridR }}>
+            <div id={hoverOn} className={`text-dark border border-2 bg_card_bento ${classConfig}`} style={{ gridColumn: gridC, gridRow: gridR }}>
                 {children}
             </div>
         );
@@ -343,150 +334,56 @@ class App extends React.Component {
     }
     render() {
         const { windowWidth } = this.state;
-        const xS = windowWidth < 576;
-        const sM = windowWidth >= 576 && windowWidth < 768;
-        const mD = windowWidth >= 768 && windowWidth < 992;
-        const lG = windowWidth >= 992 && windowWidth < 1200;
+        
         const xL = windowWidth >= 1200;
+
+        const margeSection = windowWidth - 32
 
         let content = (<div></div>);
 
         if (xL) {
             content = (
                 <div className="wrapper m-xl-3 m-xxl-5 p-0" style={{ maxWidth: "1500px" }}>
-                    <Grid gridC="1/4" gridR="1/3" number="1" classConfig='rounded-5'>
-                        <div className="center m-3">
-                            <img className="rounded img-fluid" src="./src/Photo_1.jpg" alt="photo David" width="100" />
-                        </div>
-                        <div className="center">
-                            <h1>DUFOUR David</h1>
-                            <h2>38 ans</h2>
-                            <h2>Groisy 74</h2>
-                        </div>
+                    <Grid gridC="1/4" gridR="1/3" hoverOn="" classConfig='rounded-5 animate__animated animate__fadeInDown'>
+                        <PresentationSimple />
                     </Grid>
-                    <Grid gridC="4/7" gridR="" number="2" classConfig='center rounded-5'>
-                        <div className="row">
-                            <div className="center col m-0 p-0">
-                                <img className="rounded img-fluid" src="./src/logo2.png" alt="logo DevInside" width="100" />
-                            </div>
-                            <div className="center col">
-                                <h1>DEVINSIDE</h1>                                
-                            </div>                            
-                        </div>
-                        <h2 className="text-center">Votre vision, notre expertise.</h2>
+                    <Grid gridC="4/7" gridR="" hoverOn="" classConfig='center rounded-5'>
+                        <PresentationDevInside />
                     </Grid>
-                    <Grid gridC="7/10" gridR="1/6" number="3" classConfig='rounded-5'>
+                    <Grid gridC="7/10" gridR="1/6" hoverOn="sectionHoverOn" classConfig='rounded-5'>
                         <Reconversion />
                     </Grid>
-                    <Grid gridC="4/7" gridR="" number="4" classConfig='center rounded-5'>
-                        <Btn_contact classConfig='fa-5x' gapConfig='gap-5' />
+                    <Grid gridC="4/7" gridR="" hoverOn="" classConfig='center rounded-5'>
+                        <Btn_contact classConfig='fa-2x' gapConfig='gap-5' />
                     </Grid>
-                    <Grid gridC="1/7" gridR="3/8" number="5" classConfig='rounded-5'>
+                    <Grid gridC="1/7" gridR="3/8" hoverOn="" classConfig='rounded-5'>
                         <Projets />
                     </Grid>
-                    <Grid gridC="7/10" gridR="6/8" number="6" classConfig='rounded-5'>
+                    <Grid gridC="7/10" gridR="6/8" hoverOn="" classConfig='rounded-5'>
                         <Skills gapConfig='gap-5' />
                     </Grid>
-                    <Grid gridC="1/11" gridR="" number="7" classConfig='rounded-5'>
+                    <Grid gridC="1/11" gridR="" hoverOn="" classConfig='rounded-5'>
                         <Contact />
                     </Grid>
                 </div>
             );
-        } else if (lG) {
+        } else {
             content = (
-                <div className="wrapper m-lg-3 p-0" style={{ maxWidth: "1200px" }}>
-                    <Grid gridC="1/4" gridR="1/3" number="1" classConfig='rounded-5'>
-                        <PresentationSimple />
-                    </Grid>
-                    <Grid gridC="4/7" gridR="" number="2" classConfig='rounded-5'>
-                        <PresentationDevInside />
-                    </Grid>
-                    <Grid gridC="7/10" gridR="1/6" number="3" classConfig='rounded-5'>
-                        <Reconversion />
-                    </Grid>
-                    <Grid gridC="4/7" gridR="" number="4" classConfig='center rounded-5'>
-                        <Btn_contact classConfig='fa-3x' gapConfig='gap-5' />
-                    </Grid>
-                    <Grid gridC="1/7" gridR="3/8" number="5" classConfig='rounded-5'>
-                        <Projets />
-                    </Grid>
-                    <Grid gridC="7/10" gridR="6/8" number="6" classConfig='rounded-5'>
-                        <Skills gapConfig='gap-3' />
-                    </Grid>
-                    <Grid gridC="1/11" gridR="" number="7" classConfig='rounded-5'>
-                        <Contact />
-                    </Grid>
-                </div>
-            );
-        } else if (mD) {
-            content = (
-                <div className="wrapper m-0 p-0" style={{ maxWidth: "992px" }}>
-                    <Grid gridC="1/4" gridR="1/3" number="1" classConfig='rounded-5'>
-                        <PresentationSimple />  
-                    </Grid>
-                    <Grid gridC="4/10" gridR="1/4" number="2" classConfig='rounded-5'>
-                        <Reconversion />    
-                    </Grid>
-                    <Grid gridC="1/4" gridR="" number="3" classConfig='rounded-5'>
-                        <PresentationDevInside />
-                    </Grid>
-                    <Grid gridC="1/4" gridR="" number="4" classConfig='center rounded-5'>
-                        <Btn_contact classConfig='fa-3x' gapConfig='gap-5' />
-                    </Grid>
-                    <Grid gridC="1/4" gridR="5/8" number="5" classConfig='rounded-5'>
-                        <Skills />
-                    </Grid>
-                    <Grid gridC="1/10" gridR="" number="6" classConfig='rounded-5'>
-                        <Contact />
-                    </Grid>
-                    <Grid gridC="4/10" gridR="4/8" number="7" classConfig='rounded-5'>
-                        <Projets />
-                    </Grid>
-                </div>
-            );
-        } else if (sM) {
-            content = (
-                <div className="wrapper m-0 p-0" style={{ maxWidth: "768px" }}>
-                    <Grid gridC="1/4" gridR="1/3" number="1" classConfig='rounded-5'>
-                        <PresentationSimple />
-                    </Grid>
-                    <Grid gridC="4/10" gridR="1/4" number="2" classConfig='rounded-5'>
-                        <Reconversion />    
-                    </Grid>
-                    <Grid gridC="1/4" gridR="" number="3" classConfig='rounded-5'>
-                        <PresentationDevInside />
-                    </Grid>
-                    <Grid gridC="1/4" gridR="" number="4" classConfig='center rounded-5'>
-                        <Btn_contact classConfig='fa-3x' gapConfig='gap-3' />
-                    </Grid>
-                    <Grid gridC="1/4" gridR="5/8" number="5" classConfig='rounded-5'>
-                        <Skills />
-                    </Grid>
-                    <Grid gridC="1/10" gridR="" number="6" classConfig='rounded-5'>
-                        <Contact />
-                    </Grid>
-                    <Grid gridC="4/10" gridR="4/8" number="7" classConfig='rounded-5'>
-                        <Projets />
-                    </Grid>
-                </div>
-            );
-        } else if (xS) {
-            content = (
-                <div className="wrapper m-1 p-0" style={{ maxWidth: "576px" }}>
+                <div className="wrapper m-1 p-0" style={{ width: margeSection + "px" }}>
                     <Grid gridC="1/10" gridR="1/3" number="1" classConfig='rounded-5'>
                         <PresentationSimple />
                     </Grid>
                     <Grid gridC="1/5" gridR="" number="2" classConfig='center rounded-5'>
-                        <Btn_contact classConfig='fa-3x' gapConfig='gap-3' />
+                        <Btn_contact classConfig='fa-2x' gapConfig='gap-3' />
                     </Grid>
                     <Grid gridC="5/10" gridR="" number="3" classConfig='rounded-5'>
                         <PresentationDevInside />
                     </Grid>
                     <Grid gridC="1/10" gridR="4/7" number="4" classConfig='rounded-5'>
-                        <Reconversion />    
+                        <Reconversion />
                     </Grid>
                     <Grid gridC="1/10" gridR="" number="5" classConfig='rounded-5'>
-                        <Skills gapConfig='gap-5'/>
+                        <Skills gapConfig='gap-5' />
                     </Grid>
                     <Grid gridC="1/10" gridR="8/12" number="6" classConfig='rounded-5'>
                         <Projets />
@@ -498,10 +395,8 @@ class App extends React.Component {
             );
         }
         return (
-            <div className="mb-5">
-                <MargeTop />
+            <div className="mt-5 mb-5 center">                
                 {content}
-
             </div >
         );
     }

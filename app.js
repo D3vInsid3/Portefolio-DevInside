@@ -6,7 +6,7 @@ class PresentationSimple extends React.Component {
                     <img id="top" className="rounded img-fluid" src="./src/Photo_1.jpg" alt="photo David" width="100" />
                 </div>
                 <div className="center text-center">
-                    <h1>DUFOUR David</h1>
+                    <h2>DUFOUR David</h2>
                     <h2>38 ans</h2>
                     <h2>Groisy 74 - FRANCE</h2>
                 </div>
@@ -37,7 +37,7 @@ class Reconversion extends React.Component {
                     <h2 className="text-dark text-center m-1" style={{ fontSize: "4rem" }}>Ma reconversion</h2>
                 </div>
                 <a href="https://oclock.io/" target="_blank"><img src="./src/logo_oclock.png" alt="logo O'clock"
-                    className="img-fluid mx-auto d-block m-5" width="150" /></a>
+                    className="img-fluid mx-auto d-block m-5" width="150" title="O'Clock" /></a>
                 <div className="container">
                     <h2 className="text-center">Formation de concepteur développeur d'application</h2>
                     <p className="text-center m-0">10 mois dont 2 en stage</p>
@@ -126,15 +126,15 @@ class Projet_card extends React.Component {
         return (
             <div className="text-dark border border-1 rounded-3" id="sectionHoverOn" style={{ width: "100%" }}>
                 <div className="p-1">
-                    <h3 className="text-center">{title}</h3>
-                    <p className="text-center fs-6">{subtitle}</p>
+                    <h2 className="text-center">{title}</h2>
+                    <p className="text-center fs-4">{subtitle}</p>
                 </div>
                 <div className="container center">
                     <a href={link} target="_blank"><img className="img-fluid rounded img-zoom m-1"
                         src={img} alt={alt_img} width="600" /></a>
                 </div>
                 <div className="">
-                    <p className="text-center fs-6">{text}</p>
+                    <p className="text-center fs-4">{text}</p>
                 </div>
             </div>
         )
@@ -168,10 +168,10 @@ class Btn_contact extends React.Component {
         const { classConfig, gapConfig } = this.props
         return (
             <div className={`d-flex justify-content-center ${gapConfig} m-3`}>
-                <a href="https://linkedin.com/in/dufourd" target="_blank"><i className={`fa-brands fa-linkedin ${classConfig}`} id="iconHoverOn"></i></a>
-                <a href="https://github.com/D3vInsid3" target="_blank"><i className={`fa-brands fa-github ${classConfig}`} id="iconHoverOn"></i></a>
+                <a href="https://linkedin.com/in/dufourd" target="_blank"><i className={`fa-brands fa-linkedin ${classConfig}`} id="iconHoverOn" title="linkedin"></i></a>
+                <a href="https://github.com/D3vInsid3" target="_blank"><i className={`fa-brands fa-github ${classConfig}`} id="iconHoverOn" title="Github"></i></a>
                 <a href="mailto:d.dufour@hotmail.fr?subject=Objet%20du%20message&body=Corps%20du%20message"
-                    target="_blank"><i className={`fa-solid fa-envelope ${classConfig}`} id="iconHoverOn"></i></a>
+                    target="_blank"><i className={`fa-solid fa-envelope ${classConfig}`} id="iconHoverOn" title="Mail"></i></a>
             </div>
         );
     }
@@ -213,7 +213,7 @@ class Modal_contact extends React.Component {
                 <div className="modal-dialog">
                     <div className="modal-content border border-white">
                         <div className="modal-header bg_card_bento">
-                            <h1 className="modal-title fs-5" id="staticBackdropReactLabel">Faisons connaissance</h1>
+                            <h2 className="modal-title fs-5" id="staticBackdropReactLabel">Faisons connaissance</h2>
                             <button type="button" className="btn-close btnCloseReact" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
@@ -409,7 +409,7 @@ class App extends React.Component {
                         <PresentationSimple />
                     </Grid>
                     <Grid gridC="1/5" gridR="" number="2" classConfig='center rounded-5'>
-                        <Btn_contact classConfig='fa-2xl' gapConfig='gap-3' />
+                        <Btn_contact classConfig='fa-xl' gapConfig='gap-3' />
                     </Grid>
                     <Grid gridC="5/10" gridR="" number="3" classConfig='rounded-5'>
                         <PresentationDevInside />

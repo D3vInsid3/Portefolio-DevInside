@@ -155,6 +155,9 @@ img[alt="photo de profile pixel"]:active {
 #btnHoverOn:hover {
  background-color: #bfd0d8;
  color: black;
+}
 
+#imageHoverOn:hover {
+  filter: brightness(50%);
 }
 
